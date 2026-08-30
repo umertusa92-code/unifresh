@@ -1,10 +1,8 @@
 {
-  "program": "Freshman",
-  "description": "UniFresh Freshman Common Courses",
   "courses": [
     {
-      "id": "english",
       "name": "Communicative English Skills",
+      "description": "Freshman course designed to improve English communication skills.",
       "topics": [
         "Grammar",
         "Vocabulary",
@@ -14,24 +12,179 @@
         "Speaking",
         "Academic Communication"
       ],
+
       "short_notes": [
+
         {
-          "topic": "Grammar",
-          "note": "Grammar helps students construct correct and clear sentences. Important areas include tenses, parts of speech, subject-verb agreement and sentence structure."
+          "chapter": "Chapter 1: Grammar",
+          "notes": [
+            {
+              "topic": "Parts of Speech",
+              "note": "Parts of speech are categories of words used in sentences. Common categories include nouns, pronouns, verbs, adjectives, adverbs, prepositions, conjunctions, and interjections."
+            },
+            {
+              "topic": "Nouns",
+              "note": "A noun is a word that names a person, place, thing, or idea. Examples include student, university, book, and education."
+            },
+            {
+              "topic": "Pronouns",
+              "note": "A pronoun is used instead of a noun. Common pronouns include I, you, he, she, it, we, and they."
+            },
+            {
+              "topic": "Verbs",
+              "note": "A verb expresses an action or state. Examples include study, read, write, learn, and become."
+            },
+            {
+              "topic": "Subject and Verb Agreement",
+              "note": "The subject and verb should agree in number. A singular subject normally takes a singular verb, while a plural subject takes a plural verb."
+            }
+          ]
         },
+
         {
-          "topic": "Vocabulary",
-          "note": "Vocabulary is the collection of words used in communication. Students should learn meanings, synonyms, antonyms and how words are used in context."
+          "chapter": "Chapter 2: Tenses",
+          "notes": [
+            {
+              "topic": "Simple Present",
+              "note": "The simple present is commonly used for habits, routines, facts, and general truths. Example: Students study every day."
+            },
+            {
+              "topic": "Simple Past",
+              "note": "The simple past is used for actions that happened and finished in the past. Example: She studied yesterday."
+            },
+            {
+              "topic": "Simple Future",
+              "note": "The simple future is commonly used for actions that will happen in the future. Example: They will study tomorrow."
+            },
+            {
+              "topic": "Present Continuous",
+              "note": "The present continuous is used for an action happening around the present time. Example: The student is reading a book."
+            }
+          ]
         },
+
         {
-          "topic": "Reading",
-          "note": "Effective reading involves identifying the main idea, supporting details, vocabulary in context and the writer's purpose."
+          "chapter": "Chapter 3: Vocabulary",
+          "notes": [
+            {
+              "topic": "Vocabulary",
+              "note": "Vocabulary is the collection of words a person knows and uses in communication."
+            },
+            {
+              "topic": "Synonyms",
+              "note": "Synonyms are words that have similar or nearly similar meanings. Example: big and large."
+            },
+            {
+              "topic": "Antonyms",
+              "note": "Antonyms are words with opposite meanings. Example: hot and cold."
+            },
+            {
+              "topic": "Words in Context",
+              "note": "Understanding a word in context means using the surrounding words and sentences to understand its meaning."
+            }
+          ]
         },
+
         {
-          "topic": "Writing",
-          "note": "Academic writing should be clear, organized and supported with relevant ideas. A basic paragraph contains a topic sentence, supporting sentences and a concluding sentence."
+          "chapter": "Chapter 4: Reading",
+          "notes": [
+            {
+              "topic": "Main Idea",
+              "note": "The main idea is the central point or most important message of a reading passage."
+            },
+            {
+              "topic": "Supporting Details",
+              "note": "Supporting details provide information that explains, describes, or supports the main idea."
+            },
+            {
+              "topic": "Reading for Specific Information",
+              "note": "Reading for specific information means looking for particular facts, names, dates, numbers, or other details."
+            },
+            {
+              "topic": "Making Inferences",
+              "note": "An inference is a conclusion that a reader makes using information from the text and prior knowledge."
+            }
+          ]
+        },
+
+        {
+          "chapter": "Chapter 5: Writing",
+          "notes": [
+            {
+              "topic": "Paragraph",
+              "note": "A paragraph is a group of related sentences that develops one main idea."
+            },
+            {
+              "topic": "Topic Sentence",
+              "note": "A topic sentence introduces the main idea of a paragraph."
+            },
+            {
+              "topic": "Supporting Sentences",
+              "note": "Supporting sentences explain and develop the main idea introduced by the topic sentence."
+            },
+            {
+              "topic": "Concluding Sentence",
+              "note": "A concluding sentence brings the paragraph to a logical ending."
+            }
+          ]
+        },
+
+        {
+          "chapter": "Chapter 6: Listening",
+          "notes": [
+            {
+              "topic": "Active Listening",
+              "note": "Active listening requires paying attention to the speaker and understanding the message."
+            },
+            {
+              "topic": "Listening for Main Ideas",
+              "note": "Listening for the main idea means identifying the most important message in spoken communication."
+            },
+            {
+              "topic": "Listening for Details",
+              "note": "Listening for details involves identifying specific information from spoken communication."
+            }
+          ]
+        },
+
+        {
+          "chapter": "Chapter 7: Speaking",
+          "notes": [
+            {
+              "topic": "Introduction",
+              "note": "A clear introduction helps a speaker begin communication and establish the topic."
+            },
+            {
+              "topic": "Discussion",
+              "note": "A discussion involves exchanging ideas, opinions, and information with other people."
+            },
+            {
+              "topic": "Presentation",
+              "note": "An academic presentation should have a clear introduction, organized main points, and a conclusion."
+            }
+          ]
+        },
+
+        {
+          "chapter": "Chapter 8: Academic Communication",
+          "notes": [
+            {
+              "topic": "Academic Language",
+              "note": "Academic language is formal language commonly used in university study, assignments, presentations, and academic discussions."
+            },
+            {
+              "topic": "Academic Discussion",
+              "note": "Academic discussion requires students to express ideas clearly, listen to others, and provide relevant reasons or evidence."
+            },
+            {
+              "topic": "Academic Presentation",
+              "note": "An academic presentation should be organized, clear, relevant, and appropriate for the audience."
+            }
+          ]
         }
+
       ],
+
       "quiz": [
         {
           "question": "Which sentence is grammatically correct?",
@@ -41,341 +194,269 @@
             "He going to school every day.",
             "He gone to school every day."
           ],
-          "answer": 1
+          "answer": "He goes to school every day."
         },
         {
-          "question": "What is the main purpose of a topic sentence?",
+          "question": "Which word is a synonym of 'big'?",
           "options": [
-            "To introduce the main idea",
-            "To give a reference",
-            "To end an essay",
-            "To list vocabulary"
+            "Small",
+            "Large",
+            "Short",
+            "Weak"
           ],
-          "answer": 0
+          "answer": "Large"
+        },
+        {
+          "question": "What is the main idea of a passage?",
+          "options": [
+            "The central point",
+            "A minor detail",
+            "A difficult word",
+            "The title only"
+          ],
+          "answer": "The central point"
+        },
+        {
+          "question": "What does a topic sentence do?",
+          "options": [
+            "Ends every essay",
+            "Introduces the main idea of a paragraph",
+            "Lists all vocabulary",
+            "Asks a question"
+          ],
+          "answer": "Introduces the main idea of a paragraph"
         }
       ],
+
       "mock_exam": {
-        "duration_minutes": 90,
-        "total_questions": 50,
-        "sections": [
+        "number_of_questions": 4,
+        "duration": "30 minutes",
+        "questions": [
           {
-            "name": "Grammar",
-            "questions": 15
+            "question": "Choose the correct sentence.",
+            "options": [
+              "She study English.",
+              "She studies English.",
+              "She studying English.",
+              "She studieds English."
+            ],
+            "answer": "She studies English."
           },
           {
-            "name": "Vocabulary",
-            "questions": 10
+            "question": "Which word has the opposite meaning of 'easy'?",
+            "options": [
+              "Simple",
+              "Difficult",
+              "Clear",
+              "Short"
+            ],
+            "answer": "Difficult"
           },
           {
-            "name": "Reading",
-            "questions": 15
+            "question": "What is a paragraph?",
+            "options": [
+              "A group of unrelated words",
+              "A group of related sentences about one main idea",
+              "A single word",
+              "A list of questions"
+            ],
+            "answer": "A group of related sentences about one main idea"
           },
           {
-            "name": "Writing",
-            "questions": 10
+            "question": "What is active listening?",
+            "options": [
+              "Ignoring the speaker",
+              "Talking continuously",
+              "Paying attention and understanding the speaker",
+              "Reading a book"
+            ],
+            "answer": "Paying attention and understanding the speaker"
           }
         ]
       }
     },
+
+
     {
-      "id": "critical-thinking",
       "name": "Critical Thinking",
+      "description": "Freshman course focused on reasoning, analysis, problem solving, and decision making.",
+
       "topics": [
-        "Meaning of Critical Thinking",
+        "Introduction to Critical Thinking",
         "Arguments",
-        "Reasoning",
         "Evidence",
-        "Fallacies",
+        "Reasoning",
         "Problem Solving",
-        "Decision Making"
+        "Decision Making",
+        "Logical Fallacies"
       ],
+
       "short_notes": [
+
         {
-          "topic": "Critical Thinking",
-          "note": "Critical thinking is the process of carefully analyzing information before accepting a conclusion."
+          "chapter": "Chapter 1: Introduction to Critical Thinking",
+          "notes": [
+            {
+              "topic": "Critical Thinking",
+              "note": "Critical thinking is the process of carefully analyzing information, evaluating ideas, and making reasoned judgments."
+            },
+            {
+              "topic": "Importance of Critical Thinking",
+              "note": "Critical thinking helps students evaluate information, solve problems, make decisions, and avoid unsupported conclusions."
+            }
+          ]
         },
+
         {
-          "topic": "Arguments",
-          "note": "An argument contains claims supported by reasons or evidence."
+          "chapter": "Chapter 2: Arguments",
+          "notes": [
+            {
+              "topic": "Argument",
+              "note": "An argument is a set of statements in which reasons are presented to support a conclusion."
+            },
+            {
+              "topic": "Premise",
+              "note": "A premise is a statement that provides support or a reason for a conclusion."
+            },
+            {
+              "topic": "Conclusion",
+              "note": "A conclusion is the claim or judgment that an argument attempts to support."
+            }
+          ]
         },
+
         {
-          "topic": "Evidence",
-          "note": "Evidence provides support for a claim. Strong evidence should be relevant, reliable and sufficient."
+          "chapter": "Chapter 3: Evidence",
+          "notes": [
+            {
+              "topic": "Evidence",
+              "note": "Evidence is information used to support a claim or conclusion."
+            },
+            {
+              "topic": "Reliable Evidence",
+              "note": "Reliable evidence should come from trustworthy sources and should be relevant to the claim being evaluated."
+            }
+          ]
         },
+
         {
-          "topic": "Fallacies",
-          "note": "A fallacy is an error in reasoning that can make an argument weak or misleading."
+          "chapter": "Chapter 4: Problem Solving",
+          "notes": [
+            {
+              "topic": "Identifying a Problem",
+              "note": "Problem solving begins by clearly identifying and understanding the problem."
+            },
+            {
+              "topic": "Possible Solutions",
+              "note": "After identifying a problem, different possible solutions can be developed and evaluated."
+            },
+            {
+              "topic": "Evaluating Solutions",
+              "note": "Solutions should be evaluated according to their advantages, disadvantages, feasibility, and possible consequences."
+            }
+          ]
+        },
+
+        {
+          "chapter": "Chapter 5: Decision Making",
+          "notes": [
+            {
+              "topic": "Decision Making",
+              "note": "Decision making involves choosing among alternatives based on available information and relevant criteria."
+            },
+            {
+              "topic": "Consequences",
+              "note": "Good decision making considers both immediate and possible future consequences."
+            }
+          ]
+        },
+
+        {
+          "chapter": "Chapter 6: Logical Fallacies",
+          "notes": [
+            {
+              "topic": "Logical Fallacy",
+              "note": "A logical fallacy is an error in reasoning that can make an argument weak or misleading."
+            },
+            {
+              "topic": "Ad Hominem",
+              "note": "An ad hominem argument attacks a person instead of addressing the person's argument."
+            },
+            {
+              "topic": "Hasty Generalization",
+              "note": "A hasty generalization occurs when a broad conclusion is made from insufficient evidence."
+            }
+          ]
         }
+
       ],
+
       "quiz": [
+        {
+          "question": "What is critical thinking?",
+          "options": [
+            "Memorizing everything",
+            "Carefully analyzing and evaluating information",
+            "Ignoring evidence",
+            "Accepting every claim"
+          ],
+          "answer": "Carefully analyzing and evaluating information"
+        },
         {
           "question": "What is evidence?",
           "options": [
+            "Information used to support a claim",
             "A random opinion",
-            "Information supporting a claim",
             "A question",
             "A greeting"
           ],
-          "answer": 1
+          "answer": "Information used to support a claim"
         },
         {
-          "question": "What is a fallacy?",
+          "question": "What is a conclusion?",
           "options": [
-            "A type of evidence",
-            "An error in reasoning",
-            "A research method",
-            "A conclusion"
+            "A supporting reason",
+            "The claim an argument attempts to support",
+            "A vocabulary word",
+            "A question"
           ],
-          "answer": 1
+          "answer": "The claim an argument attempts to support"
         }
       ],
+
       "mock_exam": {
-        "duration_minutes": 90,
-        "total_questions": 50,
-        "sections": [
+        "number_of_questions": 3,
+        "duration": "30 minutes",
+        "questions": [
           {
-            "name": "Concepts",
-            "questions": 10
+            "question": "Which activity is part of critical thinking?",
+            "options": [
+              "Evaluating evidence",
+              "Ignoring information",
+              "Guessing without reason",
+              "Avoiding questions"
+            ],
+            "answer": "Evaluating evidence"
           },
           {
-            "name": "Arguments and Reasoning",
-            "questions": 15
+            "question": "What is a premise?",
+            "options": [
+              "A reason supporting a conclusion",
+              "A final grade",
+              "A question",
+              "A vocabulary list"
+            ],
+            "answer": "A reason supporting a conclusion"
           },
           {
-            "name": "Fallacies",
-            "questions": 10
-          },
-          {
-            "name": "Problem Solving",
-            "questions": 15
-          }
-        ]
-      }
-    },
-    {
-      "id": "mathematics",
-      "name": "Mathematics",
-      "topics": [
-        "Sets",
-        "Numbers",
-        "Algebra",
-        "Functions",
-        "Equations",
-        "Matrices",
-        "Statistics",
-        "Probability"
-      ],
-      "short_notes": [
-        {
-          "topic": "Sets",
-          "note": "A set is a well-defined collection of objects. Sets can be represented by listing elements or describing their properties."
-        },
-        {
-          "topic": "Algebra",
-          "note": "Algebra uses symbols and variables to represent numbers and relationships."
-        },
-        {
-          "topic": "Functions",
-          "note": "A function assigns each input exactly one output."
-        },
-        {
-          "topic": "Statistics",
-          "note": "Statistics involves collecting, organizing, analyzing and interpreting data."
-        }
-      ],
-      "quiz": [
-        {
-          "question": "If x + 5 = 12, what is x?",
-          "options": [
-            "5",
-            "6",
-            "7",
-            "8"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "What does statistics mainly deal with?",
-          "options": [
-            "Data",
-            "Languages",
-            "History",
-            "Grammar"
-          ],
-          "answer": 0
-        }
-      ],
-      "mock_exam": {
-        "duration_minutes": 120,
-        "total_questions": 50,
-        "sections": [
-          {
-            "name": "Algebra",
-            "questions": 15
-          },
-          {
-            "name": "Functions",
-            "questions": 10
-          },
-          {
-            "name": "Matrices",
-            "questions": 10
-          },
-          {
-            "name": "Statistics and Probability",
-            "questions": 15
-          }
-        ]
-      }
-    },
-    {
-      "id": "civics",
-      "name": "Civics and Ethical Education",
-      "topics": [
-        "Citizenship",
-        "Rights and Responsibilities",
-        "Democracy",
-        "Constitution",
-        "Rule of Law",
-        "Human Rights",
-        "Ethics",
-        "Peace and Tolerance"
-      ],
-      "short_notes": [
-        {
-          "topic": "Citizenship",
-          "note": "Citizenship involves membership in a state together with rights, responsibilities and participation in society."
-        },
-        {
-          "topic": "Democracy",
-          "note": "Democracy is a system in which citizens participate in governing, directly or through representatives."
-        },
-        {
-          "topic": "Rule of Law",
-          "note": "Rule of law means that laws apply to people and institutions and should guide the exercise of public power."
-        },
-        {
-          "topic": "Human Rights",
-          "note": "Human rights are basic rights and freedoms that belong to people."
-        }
-      ],
-      "quiz": [
-        {
-          "question": "Which is an important responsibility of a citizen?",
-          "options": [
-            "Ignoring laws",
-            "Respecting laws",
-            "Avoiding society",
-            "Rejecting responsibilities"
-          ],
-          "answer": 1
-        },
-        {
-          "question": "What does democracy emphasize?",
-          "options": [
-            "Citizen participation",
-            "No laws",
-            "One-person rule",
-            "No elections"
-          ],
-          "answer": 0
-        }
-      ],
-      "mock_exam": {
-        "duration_minutes": 90,
-        "total_questions": 50,
-        "sections": [
-          {
-            "name": "Citizenship",
-            "questions": 10
-          },
-          {
-            "name": "Democracy",
-            "questions": 15
-          },
-          {
-            "name": "Rights and Responsibilities",
-            "questions": 15
-          },
-          {
-            "name": "Ethics and Peace",
-            "questions": 10
-          }
-        ]
-      }
-    },
-    {
-      "id": "ict",
-      "name": "Information and Communication Technology",
-      "topics": [
-        "Computer Basics",
-        "Operating Systems",
-        "Internet",
-        "Digital Communication",
-        "Word Processing",
-        "Spreadsheets",
-        "Presentations",
-        "Cybersecurity"
-      ],
-      "short_notes": [
-        {
-          "topic": "Computer Basics",
-          "note": "A computer is an electronic device that processes data to produce useful information."
-        },
-        {
-          "topic": "Internet",
-          "note": "The internet is a global network that allows computers and devices to communicate and share information."
-        },
-        {
-          "topic": "Cybersecurity",
-          "note": "Cybersecurity protects systems, networks and information from unauthorized access and attacks."
-        },
-        {
-          "topic": "Spreadsheets",
-          "note": "Spreadsheet software is used to organize data, perform calculations and create charts."
-        }
-      ],
-      "quiz": [
-        {
-          "question": "What is the internet?",
-          "options": [
-            "A single computer",
-            "A global network",
-            "A printer",
-            "An operating system"
-          ],
-          "answer": 1
-        },
-        {
-          "question": "What is cybersecurity mainly concerned with?",
-          "options": [
-            "Protecting digital systems and information",
-            "Writing essays",
-            "Drawing pictures",
-            "Playing games"
-          ],
-          "answer": 0
-        }
-      ],
-      "mock_exam": {
-        "duration_minutes": 90,
-        "total_questions": 50,
-        "sections": [
-          {
-            "name": "Computer Basics",
-            "questions": 10
-          },
-          {
-            "name": "Internet and Communication",
-            "questions": 10
-          },
-          {
-            "name": "Office Applications",
-            "questions": 15
-          },
-          {
-            "name": "Cybersecurity",
-            "questions": 15
+            "question": "What is a logical fallacy?",
+            "options": [
+              "An error in reasoning",
+              "A correct answer",
+              "A study schedule",
+              "A paragraph"
+            ],
+            "answer": "An error in reasoning"
           }
         ]
       }
