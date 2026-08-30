@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>UniFresh - Freshman Courses</title>
 
   <style>
@@ -33,7 +32,6 @@
 
     header p {
       opacity: 0.9;
-      font-size: 16px;
     }
 
     .container {
@@ -72,7 +70,7 @@
     .course h2 {
       color: #2563eb;
       margin-bottom: 10px;
-      font-size: 22px;
+      line-height: 1.3;
     }
 
     .course p {
@@ -96,6 +94,11 @@
       opacity: 0.85;
     }
 
+    .back-btn {
+      background: #6b7280;
+      margin-bottom: 20px;
+    }
+
     .content {
       background: white;
       margin-top: 25px;
@@ -108,10 +111,11 @@
     .content h2 {
       color: #2563eb;
       margin-bottom: 20px;
+      line-height: 1.3;
     }
 
     .section {
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
     .section h3 {
@@ -124,22 +128,26 @@
     }
 
     .section li {
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       line-height: 1.5;
     }
 
-    .note-item {
+    .note {
       margin-bottom: 12px;
+      padding: 12px;
+      background: #f8fafc;
+      border-left: 4px solid #2563eb;
+      border-radius: 6px;
+      line-height: 1.5;
     }
 
-    .note-topic {
-      font-weight: bold;
+    .note strong {
       color: #2563eb;
     }
 
     .quiz-question {
       background: #f3f4f6;
-      padding: 15px;
+      padding: 18px;
       border-radius: 10px;
       margin-bottom: 15px;
     }
@@ -150,14 +158,20 @@
       line-height: 1.5;
     }
 
-    .quiz-option {
-      margin: 4px 3px;
+    .quiz-result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .mock-exam {
+      background: #eff6ff;
+      padding: 18px;
+      border-radius: 10px;
     }
 
     .loading {
       text-align: center;
       padding: 40px;
-      color: #666;
     }
 
     .error {
@@ -168,637 +182,726 @@
       margin-top: 20px;
     }
 
-    .no-results {
+    .empty {
       background: white;
       padding: 25px;
       border-radius: 10px;
       text-align: center;
-      color: #666;
     }
 
-    .back-button {
-      background: #6b7280;
-      margin-bottom: 20px;
-    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
 
-    .correct {
-      background: green !important;
-    }
+      .container {
+        padding: 0 12px;
+      }
 
-    .wrong {
-      background: red !important;
-    }
-
-    .exam-info {
-      background: #eff6ff;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+      .content {
+        padding: 18px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🎓 UniFresh</h1>
-    <p>Your University Freshman Study Companion</p>
-  </header>
+<header>
+  <h1>🎓 UniFresh</h1>
+  <p>Your University Freshman Study Companion</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <input
-      type="text"
-      id="search"
-      class="search"
-      placeholder="Search courses..."
-      oninput="searchCourses()"
-    >
+  <input
+    type="text"
+    id="search"
+    class="search"
+    placeholder="Search courses..."
+  >
 
-    <div id="courses" class="courses">
-      <div class="loading">Loading courses...</div>
-    </div>
-
-    <div id="content" class="content"></div>
-
+  <div id="courses" class="courses">
+    <div class="loading">Loading courses...</div>
   </div>
 
-  <script>
+  <div id="content" class="content"></div>
 
-    let courses = [];
+</div>
 
-    /* ================================
-       LOAD COURSES
-    ================================= */
+<script>
 
-    fetch("courses.json")
-      .then(response => {
-
-        if (!response.ok) {
-          throw new Error("courses.json not found");
-        }
-
-        return response.json();
-      })
-
-      .then(data => {
-
-        courses = Array.isArray(data)
-          ? data
-          : (data.courses || []);
-
-        displayCourses(courses);
-
-      })
-
-      .catch(error => {
-
-        document.getElementById("courses").innerHTML = `
-          <div class="error">
-            <h3>⚠️ Course data could not be loaded.</h3>
-            <p>
-              Make sure <b>courses.json</b> is in the same folder
-              as <b>index.html</b>.
-            </p>
-          </div>
-        `;
-
-        console.error(error);
-
-      });
+let courses = [];
 
 
-    /* ================================
-       DISPLAY COURSES
-    ================================= */
+/* =========================
+   LOAD COURSES
+========================= */
 
-    function displayCourses(list) {
-
-      const container = document.getElementById("courses");
-
-      if (!list || list.length === 0) {
-
-        container.innerHTML = `
-          <div class="no-results">
-            No courses found.
-          </div>
-        `;
-
-        return;
-      }
-
-      container.innerHTML = list.map(course => {
-
-        const originalIndex = courses.indexOf(course);
-
-        return `
-          <div class="course">
-
-            <h2>
-              📚 ${escapeHTML(course.name || "Unnamed Course")}
-            </h2>
-
-            <p>
-              ${escapeHTML(
-                course.description ||
-                course.short_description ||
-                "Freshman course"
-              )}
-            </p>
-
-            <button onclick="showCourse(${originalIndex})">
-              📖 Open Course
-            </button>
-
-          </div>
-        `;
-
-      }).join("");
+fetch("courses.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("courses.json not found");
     }
 
+    return response.json();
+  })
+  .then(data => {
 
-    /* ================================
-       SHOW COURSE
-    ================================= */
+    courses = Array.isArray(data)
+      ? data
+      : (data.courses || []);
 
-    function showCourse(index) {
+    displayCourses(courses);
 
-      const course = courses[index];
+  })
+  .catch(error => {
 
-      if (!course) {
-        return;
-      }
+    document.getElementById("courses").innerHTML = `
+      <div class="error">
+        <h3>⚠️ Course data could not be loaded.</h3>
+        <p>
+          Make sure <b>courses.json</b> is in the same folder
+          as <b>index.html</b>.
+        </p>
+      </div>
+    `;
 
-      const content = document.getElementById("content");
+    console.error(error);
+  });
 
-      let html = `
 
-        <button class="back-button" onclick="closeCourse()">
-          ← Back to Courses
-        </button>
+/* =========================
+   DISPLAY COURSES
+========================= */
+
+function displayCourses(list) {
+
+  const container = document.getElementById("courses");
+
+  if (!list || list.length === 0) {
+
+    container.innerHTML = `
+      <div class="empty">
+        <h3>No courses found.</h3>
+      </div>
+    `;
+
+    return;
+  }
+
+  container.innerHTML = list.map(course => {
+
+    const originalIndex = courses.indexOf(course);
+
+    return `
+      <div class="course">
 
         <h2>
-          📚 ${escapeHTML(course.name || "Course")}
+          📚 ${escapeHTML(course.name || "Unnamed Course")}
         </h2>
 
-      `;
-
-
-      /* ================================
-         TOPICS
-      ================================= */
-
-      if (Array.isArray(course.topics) && course.topics.length > 0) {
-
-        html += `
-
-          <div class="section">
-
-            <h3>📌 Topics</h3>
-
-            <ul>
-
-              ${course.topics.map(topic => {
-
-                if (typeof topic === "string") {
-                  return `<li>${escapeHTML(topic)}</li>`;
-                }
-
-                return `
-                  <li>
-                    ${escapeHTML(
-                      topic.name ||
-                      topic.topic ||
-                      ""
-                    )}
-                  </li>
-                `;
-
-              }).join("")}
-
-            </ul>
-
-          </div>
-
-        `;
-      }
-
-
-      /* ================================
-         SHORT NOTES
-      ================================= */
-
-      const notes =
-        course.short_notes ||
-        course.notes ||
-        [];
-
-      if (Array.isArray(notes) && notes.length > 0) {
-
-        html += `
-
-          <div class="section">
-
-            <h3>📝 Short Notes</h3>
-
-            <ul>
-
-              ${notes.map(note => {
-
-                if (typeof note === "string") {
-
-                  return `
-                    <li class="note-item">
-                      ${escapeHTML(note)}
-                    </li>
-                  `;
-
-                }
-
-                const topic =
-                  note.topic ||
-                  note.title ||
-                  "";
-
-                const text =
-                  note.note ||
-                  note.text ||
-                  note.description ||
-                  "";
-
-                return `
-                  <li class="note-item">
-
-                    ${
-                      topic
-                        ? `<span class="note-topic">
-                             ${escapeHTML(topic)}:
-                           </span> `
-                        : ""
-                    }
-
-                    ${escapeHTML(text)}
-
-                  </li>
-                `;
-
-              }).join("")}
-
-            </ul>
-
-          </div>
-
-        `;
-      }
-
-
-      /* ================================
-         PRACTICE QUIZ
-      ================================= */
-
-      if (Array.isArray(course.quiz) && course.quiz.length > 0) {
-
-        html += `
-
-          <div class="section">
-
-            <h3>❓ Practice Quiz</h3>
-
-        `;
-
-        course.quiz.forEach((q, i) => {
-
-          html += `
-
-            <div class="quiz-question">
-
-              <strong>
-                ${i + 1}. ${escapeHTML(
-                  q.question || "Question"
-                )}
-              </strong>
-
-              <div>
-
-                ${
-                  Array.isArray(q.options)
-                    ? q.options.map(option => {
-
-                        return `
-                          <button
-                            class="quiz-option"
-                            onclick="
-                              checkAnswer(
-                                this,
-                                '${escapeJS(q.answer)}',
-                                '${escapeJS(option)}'
-                              )
-                            "
-                          >
-                            ${escapeHTML(option)}
-                          </button>
-                        `;
-
-                      }).join("")
-                    : ""
-                }
-
-              </div>
-
-            </div>
-
-          `;
-
-        });
-
-        html += `</div>`;
-      }
-
-
-      /* ================================
-         MOCK EXAM
-      ================================= */
-
-      if (course.mock_exam) {
-
-        const questions =
-          Array.isArray(course.mock_exam.questions)
-            ? course.mock_exam.questions
-            : [];
-
-        const numberOfQuestions =
-          questions.length ||
-          course.mock_exam.number_of_questions ||
-          "N/A";
-
-        const duration =
-          course.mock_exam.duration ||
-          "Not specified";
-
-        html += `
-
-          <div class="section">
-
-            <h3>🎯 Mock Exam</h3>
-
-            <div class="exam-info">
-
-              <p>
-                <strong>Questions:</strong>
-                ${escapeHTML(String(numberOfQuestions))}
-              </p>
-
-              <p>
-                <strong>Duration:</strong>
-                ${escapeHTML(String(duration))}
-              </p>
-
-            </div>
-
-            ${
-              questions.length > 0
-                ? `
-                  <button onclick="startMockExam(${index})">
-                    ▶️ Start Mock Exam
-                  </button>
-                `
-                : `
-                  <p>
-                    Mock exam questions are not available yet.
-                  </p>
-                `
-            }
-
-          </div>
-
-        `;
-      }
-
-
-      content.innerHTML = html;
-
-      content.style.display = "block";
-
-      content.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-
-
-    /* ================================
-       CLOSE COURSE
-    ================================= */
-
-    function closeCourse() {
-
-      const content = document.getElementById("content");
-
-      content.style.display = "none";
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-
-
-    /* ================================
-       CHECK QUIZ ANSWER
-    ================================= */
-
-    function checkAnswer(button, answer, selected) {
-
-      if (answer === selected) {
-
-        button.classList.remove("wrong");
-        button.classList.add("correct");
-
-        button.innerHTML = "✅ Correct";
-
-      } else {
-
-        button.classList.remove("correct");
-        button.classList.add("wrong");
-
-        button.innerHTML = "❌ Try Again";
-      }
-    }
-
-
-    /* ================================
-       SEARCH COURSES
-    ================================= */
-
-    function searchCourses() {
-
-      const searchText =
-        document
-          .getElementById("search")
-          .value
-          .trim()
-          .toLowerCase();
-
-      const filtered = courses.filter(course => {
-
-        const name =
-          String(course.name || "").toLowerCase();
-
-        const description =
-          String(
+        <p>
+          ${escapeHTML(
             course.description ||
             course.short_description ||
-            ""
-          ).toLowerCase();
+            "Freshman course"
+          )}
+        </p>
 
-        return (
-          name.includes(searchText) ||
-          description.includes(searchText)
-        );
-
-      });
-
-      displayCourses(filtered);
-    }
-
-
-    /* ================================
-       START MOCK EXAM
-    ================================= */
-
-    function startMockExam(index) {
-
-      const course = courses[index];
-
-      if (
-        !course ||
-        !course.mock_exam ||
-        !Array.isArray(course.mock_exam.questions)
-      ) {
-
-        alert(
-          "Mock exam questions are not available yet."
-        );
-
-        return;
-      }
-
-      const questions =
-        course.mock_exam.questions;
-
-      const content =
-        document.getElementById("content");
-
-      let exam = `
-
-        <button
-          class="back-button"
-          onclick="showCourse(${index})"
-        >
-          ← Back to Course
+        <button onclick="showCourse(${originalIndex})">
+          📖 Open Course
         </button>
 
-        <h2>
-          🎯 ${escapeHTML(
-            course.name || "Course"
-          )} - Mock Exam
-        </h2>
+      </div>
+    `;
 
-      `;
+  }).join("");
+}
 
 
-      questions.forEach((q, i) => {
+/* =========================
+   SHOW COURSE
+========================= */
 
-        exam += `
+function showCourse(index) {
 
-          <div class="quiz-question">
+  const course = courses[index];
 
-            <strong>
-              ${i + 1}. ${escapeHTML(
-                q.question || "Question"
-              )}
-            </strong>
+  if (!course) {
+    return;
+  }
 
-            <div>
+  const content = document.getElementById("content");
+
+  let html = `
+
+    <button class="back-btn" onclick="backToCourses()">
+      ← Back to Courses
+    </button>
+
+    <h2>
+      📚 ${escapeHTML(course.name || "Course")}
+    </h2>
+
+  `;
+
+
+  /* =========================
+     TOPICS
+  ========================= */
+
+  if (Array.isArray(course.topics) && course.topics.length > 0) {
+
+    html += `
+      <div class="section">
+
+        <h3>📌 Topics</h3>
+
+        <ul>
+
+          ${course.topics.map(topic => {
+
+            const text =
+              typeof topic === "string"
+                ? topic
+                : (
+                    topic?.name ||
+                    topic?.title ||
+                    topic?.topic ||
+                    ""
+                  );
+
+            return `
+              <li>${escapeHTML(text)}</li>
+            `;
+
+          }).join("")}
+
+        </ul>
+
+      </div>
+    `;
+  }
+
+
+  /* =========================
+     SHORT NOTES
+  ========================= */
+
+  const notes = course.short_notes || course.notes;
+
+  if (Array.isArray(notes) && notes.length > 0) {
+
+    html += `
+      <div class="section">
+
+        <h3>📝 Short Notes</h3>
+
+        ${notes.map(note => {
+
+          if (typeof note === "string") {
+
+            return `
+              <div class="note">
+                ${escapeHTML(note)}
+              </div>
+            `;
+
+          }
+
+          const title =
+            note?.topic ||
+            note?.title ||
+            note?.name ||
+            "";
+
+          const text =
+            note?.note ||
+            note?.text ||
+            note?.description ||
+            "";
+
+          return `
+            <div class="note">
 
               ${
-                Array.isArray(q.options)
-                  ? q.options.map(option => {
-
-                      return `
-                        <button
-                          class="quiz-option"
-                          onclick="
-                            checkAnswer(
-                              this,
-                              '${escapeJS(q.answer)}',
-                              '${escapeJS(option)}'
-                            )
-                          "
-                        >
-                          ${escapeHTML(option)}
-                        </button>
-                      `;
-
-                    }).join("")
+                title
+                  ? `<strong>${escapeHTML(title)}:</strong> `
                   : ""
               }
 
+              ${escapeHTML(text)}
+
             </div>
+          `;
+
+        }).join("")}
+
+      </div>
+    `;
+  }
+
+
+  /* =========================
+     QUIZ
+  ========================= */
+
+  if (Array.isArray(course.quiz) && course.quiz.length > 0) {
+
+    html += `
+      <div class="section">
+
+        <h3>❓ Practice Quiz</h3>
+    `;
+
+    course.quiz.forEach((q, i) => {
+
+      const question =
+        q?.question ||
+        q?.text ||
+        `Question ${i + 1}`;
+
+      const options =
+        Array.isArray(q?.options)
+          ? q.options
+          : [];
+
+      html += `
+        <div class="quiz-question">
+
+          <strong>
+            ${i + 1}. ${escapeHTML(question)}
+          </strong>
+
+          <div>
+
+            ${options.map((option, optionIndex) => {
+
+              return `
+                <button
+                  onclick="checkQuizAnswer(
+                    this,
+                    ${i},
+                    ${optionIndex}
+                  )"
+                >
+                  ${escapeHTML(String(option))}
+                </button>
+              `;
+
+            }).join("")}
 
           </div>
 
-        `;
+          <div
+            id="quiz-result-${i}"
+            class="quiz-result"
+          ></div>
 
-      });
+        </div>
+      `;
+
+    });
+
+    html += `
+      </div>
+    `;
+  }
 
 
-      content.innerHTML = exam;
+  /* =========================
+     MOCK EXAM
+  ========================= */
 
-      content.style.display = "block";
+  if (course.mock_exam) {
 
-      content.scrollIntoView({
-        behavior: "smooth"
-      });
+    const mockExam = course.mock_exam;
+
+    const questionCount =
+      Array.isArray(mockExam.questions)
+        ? mockExam.questions.length
+        : (
+            mockExam.number_of_questions ||
+            "N/A"
+          );
+
+    html += `
+      <div class="section">
+
+        <h3>🎯 Mock Exam</h3>
+
+        <div class="mock-exam">
+
+          <p>
+            <strong>Questions:</strong>
+            ${escapeHTML(String(questionCount))}
+          </p>
+
+          <p>
+            <strong>Duration:</strong>
+            ${escapeHTML(
+              String(mockExam.duration || "Not specified")
+            )}
+          </p>
+
+          <br>
+
+          <button onclick="startMockExam(${index})">
+            🎯 Start Mock Exam
+          </button>
+
+        </div>
+
+      </div>
+    `;
+  }
+
+
+  content.innerHTML = html;
+
+  content.style.display = "block";
+
+  content.scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================
+   QUIZ ANSWER
+========================= */
+
+function checkQuizAnswer(button, questionIndex, selectedIndex) {
+
+  const course = getCurrentCourse();
+
+  if (!course || !Array.isArray(course.quiz)) {
+    return;
+  }
+
+  const question = course.quiz[questionIndex];
+
+  if (!question) {
+    return;
+  }
+
+  const result =
+    document.getElementById(
+      `quiz-result-${questionIndex}`
+    );
+
+  const selected =
+    question.options?.[selectedIndex];
+
+  const answer =
+    question.answer;
+
+  if (
+    String(selected).trim().toLowerCase() ===
+    String(answer).trim().toLowerCase()
+  ) {
+
+    button.innerHTML = "✅ Correct";
+    button.style.background = "green";
+
+    if (result) {
+      result.innerHTML = "✅ Correct answer!";
+      result.style.color = "green";
     }
 
+  } else {
 
-    /* ================================
-       HTML ESCAPE
-    ================================= */
+    button.innerHTML = "❌ Try Again";
+    button.style.background = "red";
 
-    function escapeHTML(value) {
+    if (result) {
+      result.innerHTML = "❌ Incorrect. Try another answer.";
+      result.style.color = "red";
+    }
+  }
+}
 
-      if (value === null || value === undefined) {
-        return "";
-      }
 
-      return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+/* =========================
+   CURRENT COURSE
+========================= */
+
+let currentCourseIndex = null;
+
+function getCurrentCourse() {
+
+  if (currentCourseIndex === null) {
+    return null;
+  }
+
+  return courses[currentCourseIndex];
+}
+
+
+/* =========================
+   UPDATED SHOW COURSE
+========================= */
+
+const originalShowCourse = showCourse;
+
+showCourse = function(index) {
+
+  currentCourseIndex = index;
+
+  originalShowCourse(index);
+};
+
+
+/* =========================
+   BACK TO COURSES
+========================= */
+
+function backToCourses() {
+
+  const content =
+    document.getElementById("content");
+
+  content.style.display = "none";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+document
+  .getElementById("search")
+  .addEventListener("input", searchCourses);
+
+
+function searchCourses() {
+
+  const searchText =
+    document
+      .getElementById("search")
+      .value
+      .trim()
+      .toLowerCase();
+
+  const filtered = courses.filter(course => {
+
+    const name =
+      String(course.name || "").toLowerCase();
+
+    const description =
+      String(
+        course.description ||
+        course.short_description ||
+        ""
+      ).toLowerCase();
+
+    return (
+      name.includes(searchText) ||
+      description.includes(searchText)
+    );
+  });
+
+  displayCourses(filtered);
+}
+
+
+/* =========================
+   MOCK EXAM
+========================= */
+
+function startMockExam(index) {
+
+  const course = courses[index];
+
+  if (
+    !course ||
+    !course.mock_exam ||
+    !Array.isArray(course.mock_exam.questions)
+  ) {
+
+    alert(
+      "Mock exam questions are not available yet."
+    );
+
+    return;
+  }
+
+  currentCourseIndex = index;
+
+  const questions =
+    course.mock_exam.questions;
+
+  const content =
+    document.getElementById("content");
+
+  let exam = `
+
+    <button
+      class="back-btn"
+      onclick="showCourse(${index})"
+    >
+      ← Back to Course
+    </button>
+
+    <h2>
+      🎯 ${escapeHTML(course.name || "Course")}
+      - Mock Exam
+    </h2>
+  `;
+
+
+  questions.forEach((q, i) => {
+
+    const question =
+      q?.question ||
+      q?.text ||
+      `Question ${i + 1}`;
+
+    const options =
+      Array.isArray(q?.options)
+        ? q.options
+        : [];
+
+    exam += `
+
+      <div class="quiz-question">
+
+        <strong>
+          ${i + 1}. ${escapeHTML(question)}
+        </strong>
+
+        <div>
+
+          ${options.map((option, optionIndex) => {
+
+            return `
+              <button
+                onclick="checkMockAnswer(
+                  this,
+                  ${i},
+                  ${optionIndex}
+                )"
+              >
+                ${escapeHTML(String(option))}
+              </button>
+            `;
+
+          }).join("")}
+
+        </div>
+
+        <div
+          id="mock-result-${i}"
+          class="quiz-result"
+        ></div>
+
+      </div>
+
+    `;
+  });
+
+
+  content.innerHTML = exam;
+
+  content.style.display = "block";
+
+  content.scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================
+   MOCK EXAM ANSWER
+========================= */
+
+function checkMockAnswer(
+  button,
+  questionIndex,
+  selectedIndex
+) {
+
+  const course =
+    getCurrentCourse();
+
+  if (
+    !course ||
+    !course.mock_exam ||
+    !Array.isArray(course.mock_exam.questions)
+  ) {
+    return;
+  }
+
+  const question =
+    course.mock_exam.questions[questionIndex];
+
+  if (!question) {
+    return;
+  }
+
+  const selected =
+    question.options?.[selectedIndex];
+
+  const answer =
+    question.answer;
+
+  const result =
+    document.getElementById(
+      `mock-result-${questionIndex}`
+    );
+
+
+  if (
+    String(selected).trim().toLowerCase() ===
+    String(answer).trim().toLowerCase()
+  ) {
+
+    button.innerHTML = "✅ Correct";
+    button.style.background = "green";
+
+    if (result) {
+      result.innerHTML = "✅ Correct answer!";
+      result.style.color = "green";
     }
 
+  } else {
 
-    /* ================================
-       JAVASCRIPT STRING ESCAPE
-    ================================= */
+    button.innerHTML = "❌ Try Again";
+    button.style.background = "red";
 
-    function escapeJS(value) {
-
-      if (value === null || value === undefined) {
-        return "";
-      }
-
-      return String(value)
-        .replace(/\\/g, "\\\\")
-        .replace(/'/g, "\\'")
-        .replace(/\n/g, "\\n")
-        .replace(/\r/g, "\\r");
+    if (result) {
+      result.innerHTML = "❌ Incorrect.";
+      result.style.color = "red";
     }
+  }
+}
 
-  </script>
+
+/* =========================
+   SAFE HTML
+========================= */
+
+function escapeHTML(value) {
+
+  if (value === null || value === undefined) {
+    return "";
+  }
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+</script>
 
 </body>
 </html>
