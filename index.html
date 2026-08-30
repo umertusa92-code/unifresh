@@ -23,7 +23,7 @@
     header {
       background: #2563eb;
       color: white;
-      padding: 28px 20px;
+      padding: 30px 20px;
       text-align: center;
     }
 
@@ -33,7 +33,7 @@
     }
 
     header p {
-      opacity: 0.92;
+      opacity: .92;
     }
 
     .container {
@@ -48,12 +48,8 @@
       border: 1px solid #d1d5db;
       border-radius: 12px;
       font-size: 16px;
-      margin-bottom: 22px;
       outline: none;
-    }
-
-    .search:focus {
-      border-color: #2563eb;
+      margin-bottom: 22px;
     }
 
     .courses {
@@ -66,7 +62,7 @@
       background: white;
       border-radius: 15px;
       padding: 22px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 4px 16px rgba(0,0,0,.07);
     }
 
     .course h2 {
@@ -93,19 +89,29 @@
     }
 
     button:hover {
-      opacity: 0.88;
+      opacity: .88;
     }
 
-    .content {
+    button:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+
+    .content,
+    .ai-box {
       background: white;
       margin-top: 25px;
       padding: 25px;
       border-radius: 15px;
-      display: none;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 16px rgba(0,0,0,.06);
     }
 
-    .content h2 {
+    .content {
+      display: none;
+    }
+
+    .content h2,
+    .ai-box h2 {
       color: #2563eb;
       margin-bottom: 18px;
     }
@@ -134,15 +140,24 @@
       margin-bottom: 7px;
     }
 
+    .chapter {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .chapter h3 {
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+
     .quiz-question {
       background: #f3f4f6;
       padding: 16px;
       border-radius: 10px;
       margin-bottom: 15px;
-    }
-
-    .quiz-question strong {
-      line-height: 1.5;
     }
 
     .loading {
@@ -156,33 +171,25 @@
       color: #991b1b;
       padding: 20px;
       border-radius: 10px;
-      margin-top: 20px;
     }
 
-    /* AI CHAT */
-
-    .ai-box {
-      margin-top: 30px;
-      background: white;
-      border-radius: 15px;
-      padding: 22px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    .close-btn {
+      background: #6b7280;
+      margin-bottom: 15px;
     }
 
-    .ai-box h2 {
-      color: #2563eb;
-      margin-bottom: 8px;
-    }
+    /* AI */
 
-    .ai-box p {
+    .ai-box > p {
       color: #6b7280;
       margin-bottom: 15px;
+      line-height: 1.6;
     }
 
     #chatMessages {
       max-height: 450px;
       overflow-y: auto;
-      padding: 10px 0;
+      padding: 5px 0;
       margin-bottom: 15px;
     }
 
@@ -205,6 +212,11 @@
       margin-right: 10%;
     }
 
+    .typing {
+      color: #6b7280;
+      font-style: italic;
+    }
+
     .chat-row {
       display: flex;
       gap: 8px;
@@ -219,22 +231,14 @@
       outline: none;
     }
 
-    #chatInput:focus {
-      border-color: #2563eb;
-    }
-
     #sendButton {
       min-width: 90px;
     }
 
-    .typing {
+    .empty {
+      text-align: center;
+      padding: 30px;
       color: #6b7280;
-      font-style: italic;
-    }
-
-    .close-btn {
-      background: #6b7280;
-      margin-bottom: 15px;
     }
 
     @media (max-width: 600px) {
@@ -281,9 +285,9 @@
 
   <!-- SEARCH -->
   <input
-    type="text"
     id="search"
     class="search"
+    type="text"
     placeholder="🔎 Search courses..."
     oninput="searchCourses()"
   >
@@ -293,36 +297,41 @@
     <div class="loading">Loading courses...</div>
   </div>
 
-  <!-- COURSE CONTENT -->
+  <!-- COURSE DETAILS -->
   <div id="content" class="content"></div>
 
-  <!-- AI ASSISTANT -->
+  <!-- AI CHAT -->
   <div class="ai-box">
 
     <h2>🤖 Ask UniFresh AI</h2>
 
     <p>
-      Ask questions about your freshman courses, chapters,
-      notes, quizzes, or exam preparation.
+      Ask about any freshman course, chapter, topic, notes,
+      quiz, or exam preparation.
     </p>
 
     <div id="chatMessages">
+
       <div class="message ai-message">
         👋 Hello! I am UniFresh AI.
 
         Ask me something like:
-        "Explain Chapter 1 of Anthropology"
+
+        "Explain Chapter 1 of Critical Thinking."
+
         or
-        "Give me detailed notes about culture."
+
+        "Give me detailed notes for Communicative English Chapter 2."
       </div>
+
     </div>
 
     <div class="chat-row">
 
       <input
-        type="text"
         id="chatInput"
-        placeholder="Ask UniFresh AI..."
+        type="text"
+        placeholder="Ask about any course..."
         onkeydown="handleChatKey(event)"
       >
 
@@ -338,37 +347,40 @@
 
 <script>
 
+/* =========================================
+   GLOBAL DATA
+========================================= */
+
 let courses = [];
 
 
 /* =========================================
-   LOAD COURSES
+   LOAD COURSES.JSON
 ========================================= */
 
-fetch("courses.json")
-  .then(response => {
+async function loadCourses() {
+
+  try {
+
+    const response = await fetch("courses.json");
 
     if (!response.ok) {
       throw new Error("courses.json not found");
     }
 
-    return response.json();
-  })
+    const data = await response.json();
 
-  .then(data => {
-
-    courses = data.courses || data;
+    courses = Array.isArray(data)
+      ? data
+      : data.courses || [];
 
     displayCourses(courses);
 
-  })
-
-  .catch(error => {
+  } catch (error) {
 
     document.getElementById("courses").innerHTML = `
       <div class="error">
         <h3>⚠️ Course data could not be loaded.</h3>
-
         <p>
           Make sure <b>courses.json</b> is in the same folder
           as <b>index.html</b>.
@@ -377,8 +389,8 @@ fetch("courses.json")
     `;
 
     console.error(error);
-
-  });
+  }
+}
 
 
 /* =========================================
@@ -389,21 +401,22 @@ function displayCourses(list) {
 
   const container = document.getElementById("courses");
 
-  if (!list || list.length === 0) {
+  if (!list.length) {
 
     container.innerHTML = `
-      <p>No courses found.</p>
+      <div class="empty">
+        No courses found.
+      </div>
     `;
 
     return;
   }
 
-  container.innerHTML = list.map((course) => {
+  container.innerHTML = list.map(course => {
 
-    const originalIndex = courses.indexOf(course);
+    const index = courses.indexOf(course);
 
     return `
-
       <div class="course">
 
         <h2>
@@ -413,21 +426,19 @@ function displayCourses(list) {
         <p>
           ${escapeHTML(
             course.description ||
-            course.short_description ||
-            "Freshman course"
+            "Freshman university course"
           )}
         </p>
 
-        <button onclick="showCourse(${originalIndex})">
+        <button onclick="showCourse(${index})">
           📖 Open Course
         </button>
 
-        <button onclick="askAboutCourse(${originalIndex})">
+        <button onclick="askCourse(${index})">
           🤖 Ask AI
         </button>
 
       </div>
-
     `;
 
   }).join("");
@@ -444,16 +455,20 @@ function showCourse(index) {
 
   if (!course) return;
 
-  const content = document.getElementById("content");
+  const content =
+    document.getElementById("content");
 
   let html = `
 
-    <button class="close-btn" onclick="closeCourse()">
+    <button
+      class="close-btn"
+      onclick="closeCourse()"
+    >
       ✕ Close
     </button>
 
     <h2>
-      📚 ${escapeHTML(course.name || "Course")}
+      📚 ${escapeHTML(course.name)}
     </h2>
 
   `;
@@ -461,21 +476,14 @@ function showCourse(index) {
 
   /* DESCRIPTION */
 
-  if (course.description || course.short_description) {
+  if (course.description) {
 
     html += `
-
       <div class="section">
-
         <p>
-          ${escapeHTML(
-            course.description ||
-            course.short_description
-          )}
+          ${escapeHTML(course.description)}
         </p>
-
       </div>
-
     `;
   }
 
@@ -485,7 +493,6 @@ function showCourse(index) {
   if (Array.isArray(course.topics)) {
 
     html += `
-
       <div class="section">
 
         <h3>📌 Topics</h3>
@@ -507,19 +514,63 @@ function showCourse(index) {
         </ul>
 
       </div>
-
     `;
+  }
+
+
+  /* CHAPTERS */
+
+  if (Array.isArray(course.chapters)) {
+
+    html += `
+      <div class="section">
+
+        <h3>📖 Chapters</h3>
+    `;
+
+    course.chapters.forEach((chapter, i) => {
+
+      const title =
+        typeof chapter === "string"
+          ? chapter
+          : chapter.title ||
+            chapter.name ||
+            `Chapter ${i + 1}`;
+
+      html += `
+        <div class="chapter">
+
+          <h3>
+            📘 ${escapeHTML(title)}
+          </h3>
+
+          <button
+            onclick="askChapter(
+              ${index},
+              ${i}
+            )"
+          >
+            🤖 Ask AI
+          </button>
+
+        </div>
+      `;
+
+    });
+
+    html += `</div>`;
   }
 
 
   /* NOTES */
 
-  const notes = course.short_notes || course.notes;
+  const notes =
+    course.short_notes ||
+    course.notes;
 
   if (Array.isArray(notes)) {
 
     html += `
-
       <div class="section">
 
         <h3>📝 Short Notes</h3>
@@ -532,7 +583,9 @@ function showCourse(index) {
               ${escapeHTML(
                 typeof note === "string"
                   ? note
-                  : note.title || note.text || ""
+                  : note.title ||
+                    note.text ||
+                    ""
               )}
             </li>
 
@@ -541,58 +594,7 @@ function showCourse(index) {
         </ul>
 
       </div>
-
     `;
-  }
-
-
-  /* CHAPTERS */
-
-  if (Array.isArray(course.chapters)) {
-
-    html += `
-
-      <div class="section">
-
-        <h3>📖 Chapters</h3>
-
-    `;
-
-    course.chapters.forEach((chapter, chapterIndex) => {
-
-      const chapterName =
-        typeof chapter === "string"
-          ? chapter
-          : chapter.title ||
-            chapter.name ||
-            `Chapter ${chapterIndex + 1}`;
-
-      html += `
-
-        <div class="quiz-question">
-
-          <strong>
-            📘 ${escapeHTML(chapterName)}
-          </strong>
-
-          <br>
-
-          <button
-            onclick="askChapter('${escapeJS(
-              course.name || "",
-              chapterName
-            )}')"
-          >
-            🤖 Ask AI About This Chapter
-          </button>
-
-        </div>
-
-      `;
-
-    });
-
-    html += `</div>`;
   }
 
 
@@ -601,25 +603,22 @@ function showCourse(index) {
   if (Array.isArray(course.quiz)) {
 
     html += `
-
       <div class="section">
 
         <h3>❓ Practice Quiz</h3>
-
     `;
 
     course.quiz.forEach((q, i) => {
 
       html += `
-
         <div class="quiz-question">
 
           <strong>
-            ${i + 1}. ${escapeHTML(q.question || "")}
+            ${i + 1}.
+            ${escapeHTML(q.question || "")}
           </strong>
 
           <br><br>
-
       `;
 
       if (Array.isArray(q.options)) {
@@ -627,7 +626,6 @@ function showCourse(index) {
         q.options.forEach(option => {
 
           html += `
-
             <button
               onclick="checkAnswer(
                 this,
@@ -637,15 +635,12 @@ function showCourse(index) {
             >
               ${escapeHTML(option)}
             </button>
-
           `;
 
         });
-
       }
 
       html += `</div>`;
-
     });
 
     html += `</div>`;
@@ -660,7 +655,6 @@ function showCourse(index) {
       course.mock_exam.questions;
 
     html += `
-
       <div class="section">
 
         <h3>🎯 Mock Exam</h3>
@@ -693,7 +687,6 @@ function showCourse(index) {
         }
 
       </div>
-
     `;
   }
 
@@ -718,28 +711,7 @@ function closeCourse() {
     document.getElementById("content");
 
   content.style.display = "none";
-
   content.innerHTML = "";
-}
-
-
-/* =========================================
-   QUIZ ANSWER
-========================================= */
-
-function checkAnswer(button, answer, selected) {
-
-  if (answer === selected) {
-
-    button.style.background = "green";
-    button.innerHTML = "✅ Correct";
-
-  } else {
-
-    button.style.background = "red";
-    button.innerHTML = "❌ Try Again";
-
-  }
 }
 
 
@@ -749,7 +721,7 @@ function checkAnswer(button, answer, selected) {
 
 function searchCourses() {
 
-  const searchText =
+  const text =
     document
       .getElementById("search")
       .value
@@ -758,9 +730,11 @@ function searchCourses() {
 
   const filtered =
     courses.filter(course =>
+
       (course.name || "")
         .toLowerCase()
-        .includes(searchText)
+        .includes(text)
+
     );
 
   displayCourses(filtered);
@@ -768,101 +742,10 @@ function searchCourses() {
 
 
 /* =========================================
-   MOCK EXAM
+   ASK COURSE
 ========================================= */
 
-function startMockExam(index) {
-
-  const course = courses[index];
-
-  if (
-    !course.mock_exam ||
-    !Array.isArray(course.mock_exam.questions)
-  ) {
-
-    alert(
-      "Mock exam questions are not available yet."
-    );
-
-    return;
-  }
-
-  const questions =
-    course.mock_exam.questions;
-
-  const content =
-    document.getElementById("content");
-
-  let exam = `
-
-    <button
-      class="close-btn"
-      onclick="showCourse(${index})"
-    >
-      ← Back to Course
-    </button>
-
-    <h2>
-      🎯 ${escapeHTML(course.name)} - Mock Exam
-    </h2>
-
-  `;
-
-  questions.forEach((q, i) => {
-
-    exam += `
-
-      <div class="quiz-question">
-
-        <strong>
-          ${i + 1}. ${escapeHTML(q.question || "")}
-        </strong>
-
-        <br><br>
-
-    `;
-
-    if (Array.isArray(q.options)) {
-
-      q.options.forEach(option => {
-
-        exam += `
-
-          <button
-            onclick="checkAnswer(
-              this,
-              '${escapeAttribute(q.answer || "")}',
-              '${escapeAttribute(option)}'
-            )"
-          >
-            ${escapeHTML(option)}
-          </button>
-
-        `;
-
-      });
-
-    }
-
-    exam += `</div>`;
-
-  });
-
-  content.innerHTML = exam;
-
-  content.style.display = "block";
-
-  content.scrollIntoView({
-    behavior: "smooth"
-  });
-}
-
-
-/* =========================================
-   AI - ASK COURSE
-========================================= */
-
-function askAboutCourse(index) {
+function askCourse(index) {
 
   const course = courses[index];
 
@@ -885,16 +768,29 @@ function askAboutCourse(index) {
 
 
 /* =========================================
-   AI - ASK CHAPTER
+   ASK CHAPTER
 ========================================= */
 
-function askChapter(courseName, chapterName) {
+function askChapter(courseIndex, chapterIndex) {
+
+  const course =
+    courses[courseIndex];
+
+  const chapter =
+    course.chapters[chapterIndex];
+
+  const chapterName =
+    typeof chapter === "string"
+      ? chapter
+      : chapter.title ||
+        chapter.name ||
+        `Chapter ${chapterIndex + 1}`;
 
   const input =
     document.getElementById("chatInput");
 
   input.value =
-    `Explain ${chapterName} of ${courseName} in detailed study notes.`;
+    `Give me detailed study notes for ${chapterName} of ${course.name}. Include important concepts, definitions, explanations, examples, key exam points, summary, and practice questions.`;
 
   input.focus();
 
@@ -907,7 +803,116 @@ function askChapter(courseName, chapterName) {
 
 
 /* =========================================
-   AI CHAT
+   QUIZ ANSWER
+========================================= */
+
+function checkAnswer(button, answer, selected) {
+
+  if (answer === selected) {
+
+    button.style.background = "green";
+    button.innerHTML = "✅ Correct";
+
+  } else {
+
+    button.style.background = "red";
+    button.innerHTML = "❌ Try Again";
+  }
+}
+
+
+/* =========================================
+   MOCK EXAM
+========================================= */
+
+function startMockExam(index) {
+
+  const course =
+    courses[index];
+
+  if (
+    !course.mock_exam ||
+    !Array.isArray(course.mock_exam.questions)
+  ) {
+
+    alert(
+      "Mock exam questions are not available yet."
+    );
+
+    return;
+  }
+
+  const questions =
+    course.mock_exam.questions;
+
+  const content =
+    document.getElementById("content");
+
+  let html = `
+
+    <button
+      class="close-btn"
+      onclick="showCourse(${index})"
+    >
+      ← Back to Course
+    </button>
+
+    <h2>
+      🎯 ${escapeHTML(course.name)} Mock Exam
+    </h2>
+  `;
+
+
+  questions.forEach((q, i) => {
+
+    html += `
+
+      <div class="quiz-question">
+
+        <strong>
+          ${i + 1}.
+          ${escapeHTML(q.question || "")}
+        </strong>
+
+        <br><br>
+    `;
+
+    if (Array.isArray(q.options)) {
+
+      q.options.forEach(option => {
+
+        html += `
+
+          <button
+            onclick="checkAnswer(
+              this,
+              '${escapeAttribute(q.answer || "")}',
+              '${escapeAttribute(option)}'
+            )"
+          >
+            ${escapeHTML(option)}
+          </button>
+
+        `;
+      });
+    }
+
+    html += `</div>`;
+  });
+
+
+  content.innerHTML = html;
+
+  content.style.display = "block";
+
+  content.scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================================
+   SEND MESSAGE TO VERCEL API
 ========================================= */
 
 async function sendMessage() {
@@ -915,7 +920,7 @@ async function sendMessage() {
   const input =
     document.getElementById("chatInput");
 
-  const button =
+  const sendButton =
     document.getElementById("sendButton");
 
   const messages =
@@ -943,9 +948,8 @@ async function sendMessage() {
 
   input.value = "";
 
-  button.disabled = true;
-
-  button.textContent = "..." ;
+  sendButton.disabled = true;
+  sendButton.textContent = "Thinking...";
 
 
   /* TYPING */
@@ -957,7 +961,7 @@ async function sendMessage() {
     "message ai-message typing";
 
   typing.textContent =
-    "UniFresh AI is thinking...";
+    "🤖 UniFresh AI is thinking...";
 
   messages.appendChild(typing);
 
@@ -992,11 +996,15 @@ async function sendMessage() {
 
     if (!response.ok) {
 
-      throw new Error(
-        data.error ||
-        "Unable to connect to UniFresh AI."
+      console.error(
+        "API error:",
+        data
       );
 
+      throw new Error(
+        data.error ||
+        "AI connection failed."
+      );
     }
 
 
@@ -1033,9 +1041,8 @@ async function sendMessage() {
   }
 
 
-  button.disabled = false;
-
-  button.textContent = "Send";
+  sendButton.disabled = false;
+  sendButton.textContent = "Send";
 
   messages.scrollTop =
     messages.scrollHeight;
@@ -1053,18 +1060,20 @@ function handleChatKey(event) {
     event.preventDefault();
 
     sendMessage();
-
   }
 }
 
 
 /* =========================================
-   SECURITY / HTML HELPERS
+   SECURITY HELPERS
 ========================================= */
 
 function escapeHTML(value) {
 
-  if (value === null || value === undefined) {
+  if (
+    value === null ||
+    value === undefined
+  ) {
     return "";
   }
 
@@ -1079,26 +1088,17 @@ function escapeHTML(value) {
 
 function escapeAttribute(value) {
 
-  if (value === null || value === undefined) {
-    return "";
-  }
-
-  return String(value)
+  return String(value || "")
     .replace(/\\/g, "\\\\")
     .replace(/'/g, "\\'");
 }
 
 
-function escapeJS(courseName, chapterName) {
+/* =========================================
+   START
+========================================= */
 
-  return String(courseName)
-    .replace(/\\/g, "\\\\")
-    .replace(/'/g, "\\'") +
-    "', '" +
-    String(chapterName)
-      .replace(/\\/g, "\\\\")
-      .replace(/'/g, "\\'");
-}
+loadCourses();
 
 </script>
 
