@@ -1,0 +1,384 @@
+{
+  "program": "Freshman",
+  "description": "UniFresh Freshman Common Courses",
+  "courses": [
+    {
+      "id": "english",
+      "name": "Communicative English Skills",
+      "topics": [
+        "Grammar",
+        "Vocabulary",
+        "Reading",
+        "Writing",
+        "Listening",
+        "Speaking",
+        "Academic Communication"
+      ],
+      "short_notes": [
+        {
+          "topic": "Grammar",
+          "note": "Grammar helps students construct correct and clear sentences. Important areas include tenses, parts of speech, subject-verb agreement and sentence structure."
+        },
+        {
+          "topic": "Vocabulary",
+          "note": "Vocabulary is the collection of words used in communication. Students should learn meanings, synonyms, antonyms and how words are used in context."
+        },
+        {
+          "topic": "Reading",
+          "note": "Effective reading involves identifying the main idea, supporting details, vocabulary in context and the writer's purpose."
+        },
+        {
+          "topic": "Writing",
+          "note": "Academic writing should be clear, organized and supported with relevant ideas. A basic paragraph contains a topic sentence, supporting sentences and a concluding sentence."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Which sentence is grammatically correct?",
+          "options": [
+            "He go to school every day.",
+            "He goes to school every day.",
+            "He going to school every day.",
+            "He gone to school every day."
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What is the main purpose of a topic sentence?",
+          "options": [
+            "To introduce the main idea",
+            "To give a reference",
+            "To end an essay",
+            "To list vocabulary"
+          ],
+          "answer": 0
+        }
+      ],
+      "mock_exam": {
+        "duration_minutes": 90,
+        "total_questions": 50,
+        "sections": [
+          {
+            "name": "Grammar",
+            "questions": 15
+          },
+          {
+            "name": "Vocabulary",
+            "questions": 10
+          },
+          {
+            "name": "Reading",
+            "questions": 15
+          },
+          {
+            "name": "Writing",
+            "questions": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "critical-thinking",
+      "name": "Critical Thinking",
+      "topics": [
+        "Meaning of Critical Thinking",
+        "Arguments",
+        "Reasoning",
+        "Evidence",
+        "Fallacies",
+        "Problem Solving",
+        "Decision Making"
+      ],
+      "short_notes": [
+        {
+          "topic": "Critical Thinking",
+          "note": "Critical thinking is the process of carefully analyzing information before accepting a conclusion."
+        },
+        {
+          "topic": "Arguments",
+          "note": "An argument contains claims supported by reasons or evidence."
+        },
+        {
+          "topic": "Evidence",
+          "note": "Evidence provides support for a claim. Strong evidence should be relevant, reliable and sufficient."
+        },
+        {
+          "topic": "Fallacies",
+          "note": "A fallacy is an error in reasoning that can make an argument weak or misleading."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "What is evidence?",
+          "options": [
+            "A random opinion",
+            "Information supporting a claim",
+            "A question",
+            "A greeting"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What is a fallacy?",
+          "options": [
+            "A type of evidence",
+            "An error in reasoning",
+            "A research method",
+            "A conclusion"
+          ],
+          "answer": 1
+        }
+      ],
+      "mock_exam": {
+        "duration_minutes": 90,
+        "total_questions": 50,
+        "sections": [
+          {
+            "name": "Concepts",
+            "questions": 10
+          },
+          {
+            "name": "Arguments and Reasoning",
+            "questions": 15
+          },
+          {
+            "name": "Fallacies",
+            "questions": 10
+          },
+          {
+            "name": "Problem Solving",
+            "questions": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "topics": [
+        "Sets",
+        "Numbers",
+        "Algebra",
+        "Functions",
+        "Equations",
+        "Matrices",
+        "Statistics",
+        "Probability"
+      ],
+      "short_notes": [
+        {
+          "topic": "Sets",
+          "note": "A set is a well-defined collection of objects. Sets can be represented by listing elements or describing their properties."
+        },
+        {
+          "topic": "Algebra",
+          "note": "Algebra uses symbols and variables to represent numbers and relationships."
+        },
+        {
+          "topic": "Functions",
+          "note": "A function assigns each input exactly one output."
+        },
+        {
+          "topic": "Statistics",
+          "note": "Statistics involves collecting, organizing, analyzing and interpreting data."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "If x + 5 = 12, what is x?",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "What does statistics mainly deal with?",
+          "options": [
+            "Data",
+            "Languages",
+            "History",
+            "Grammar"
+          ],
+          "answer": 0
+        }
+      ],
+      "mock_exam": {
+        "duration_minutes": 120,
+        "total_questions": 50,
+        "sections": [
+          {
+            "name": "Algebra",
+            "questions": 15
+          },
+          {
+            "name": "Functions",
+            "questions": 10
+          },
+          {
+            "name": "Matrices",
+            "questions": 10
+          },
+          {
+            "name": "Statistics and Probability",
+            "questions": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "civics",
+      "name": "Civics and Ethical Education",
+      "topics": [
+        "Citizenship",
+        "Rights and Responsibilities",
+        "Democracy",
+        "Constitution",
+        "Rule of Law",
+        "Human Rights",
+        "Ethics",
+        "Peace and Tolerance"
+      ],
+      "short_notes": [
+        {
+          "topic": "Citizenship",
+          "note": "Citizenship involves membership in a state together with rights, responsibilities and participation in society."
+        },
+        {
+          "topic": "Democracy",
+          "note": "Democracy is a system in which citizens participate in governing, directly or through representatives."
+        },
+        {
+          "topic": "Rule of Law",
+          "note": "Rule of law means that laws apply to people and institutions and should guide the exercise of public power."
+        },
+        {
+          "topic": "Human Rights",
+          "note": "Human rights are basic rights and freedoms that belong to people."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Which is an important responsibility of a citizen?",
+          "options": [
+            "Ignoring laws",
+            "Respecting laws",
+            "Avoiding society",
+            "Rejecting responsibilities"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What does democracy emphasize?",
+          "options": [
+            "Citizen participation",
+            "No laws",
+            "One-person rule",
+            "No elections"
+          ],
+          "answer": 0
+        }
+      ],
+      "mock_exam": {
+        "duration_minutes": 90,
+        "total_questions": 50,
+        "sections": [
+          {
+            "name": "Citizenship",
+            "questions": 10
+          },
+          {
+            "name": "Democracy",
+            "questions": 15
+          },
+          {
+            "name": "Rights and Responsibilities",
+            "questions": 15
+          },
+          {
+            "name": "Ethics and Peace",
+            "questions": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "ict",
+      "name": "Information and Communication Technology",
+      "topics": [
+        "Computer Basics",
+        "Operating Systems",
+        "Internet",
+        "Digital Communication",
+        "Word Processing",
+        "Spreadsheets",
+        "Presentations",
+        "Cybersecurity"
+      ],
+      "short_notes": [
+        {
+          "topic": "Computer Basics",
+          "note": "A computer is an electronic device that processes data to produce useful information."
+        },
+        {
+          "topic": "Internet",
+          "note": "The internet is a global network that allows computers and devices to communicate and share information."
+        },
+        {
+          "topic": "Cybersecurity",
+          "note": "Cybersecurity protects systems, networks and information from unauthorized access and attacks."
+        },
+        {
+          "topic": "Spreadsheets",
+          "note": "Spreadsheet software is used to organize data, perform calculations and create charts."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "What is the internet?",
+          "options": [
+            "A single computer",
+            "A global network",
+            "A printer",
+            "An operating system"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What is cybersecurity mainly concerned with?",
+          "options": [
+            "Protecting digital systems and information",
+            "Writing essays",
+            "Drawing pictures",
+            "Playing games"
+          ],
+          "answer": 0
+        }
+      ],
+      "mock_exam": {
+        "duration_minutes": 90,
+        "total_questions": 50,
+        "sections": [
+          {
+            "name": "Computer Basics",
+            "questions": 10
+          },
+          {
+            "name": "Internet and Communication",
+            "questions": 10
+          },
+          {
+            "name": "Office Applications",
+            "questions": 15
+          },
+          {
+            "name": "Cybersecurity",
+            "questions": 15
+          }
+        ]
+      }
+    }
+  ]
+}
