@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
 
   <title>UniFresh - Freshman Study Companion</title>
 
@@ -15,69 +16,57 @@
     }
 
     body {
-      background: #f4f7fb;
+      background: #f5f7fb;
       color: #1f2937;
-      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      background: #2563eb;
       color: white;
-      padding: 35px 20px;
+      padding: 28px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 34px;
       margin-bottom: 8px;
     }
 
     header p {
-      font-size: 16px;
-      opacity: 0.95;
+      opacity: 0.92;
     }
 
     .container {
-      width: 100%;
-      max-width: 1150px;
-      margin: 30px auto;
-      padding: 0 20px;
+      max-width: 1100px;
+      margin: 25px auto;
+      padding: 0 18px;
     }
 
     .search {
       width: 100%;
-      padding: 15px 18px;
+      padding: 15px;
       border: 1px solid #d1d5db;
       border-radius: 12px;
       font-size: 16px;
+      margin-bottom: 22px;
       outline: none;
-      background: white;
-      margin-bottom: 25px;
     }
 
     .search:focus {
       border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
     }
 
     .courses {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 18px;
     }
 
     .course {
       background: white;
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
-      border: 1px solid #e5e7eb;
-      transition: 0.2s;
-    }
-
-    .course:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
     }
 
     .course h2 {
@@ -88,17 +77,8 @@
 
     .course p {
       color: #6b7280;
+      line-height: 1.6;
       margin-bottom: 15px;
-    }
-
-    .chapter-count {
-      display: inline-block;
-      background: #eff6ff;
-      color: #1d4ed8;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 13px;
-      margin-bottom: 12px;
     }
 
     button {
@@ -106,155 +86,63 @@
       padding: 10px 15px;
       border-radius: 9px;
       cursor: pointer;
-      margin: 4px 3px;
       background: #2563eb;
       color: white;
+      margin: 4px 3px;
       font-size: 14px;
     }
 
     button:hover {
-      background: #1d4ed8;
-    }
-
-    .back-button {
-      background: #6b7280;
-      margin-bottom: 20px;
-    }
-
-    .back-button:hover {
-      background: #4b5563;
+      opacity: 0.88;
     }
 
     .content {
       background: white;
-      margin-top: 30px;
-      padding: 28px;
-      border-radius: 16px;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 15px;
       display: none;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
-    .content > h2 {
+    .content h2 {
       color: #2563eb;
-      font-size: 29px;
-      margin-bottom: 8px;
+      margin-bottom: 18px;
     }
 
-    .course-description {
-      color: #6b7280;
-      margin-bottom: 25px;
+    .section {
+      margin-bottom: 28px;
     }
 
-    .topics-box {
-      background: #f8fafc;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-    }
-
-    .topics-box h3 {
-      margin-bottom: 10px;
+    .section h3 {
+      margin-bottom: 12px;
       color: #111827;
     }
 
-    .topics-box ul {
-      padding-left: 22px;
+    .section p {
+      line-height: 1.7;
+      margin-bottom: 10px;
     }
 
-    .chapter {
-      border: 1px solid #dbeafe;
-      border-radius: 15px;
-      margin-bottom: 25px;
-      overflow: hidden;
-      background: white;
+    .section ul,
+    .section ol {
+      padding-left: 25px;
+      line-height: 1.7;
     }
 
-    .chapter-header {
-      background: #eff6ff;
-      padding: 20px;
-      border-bottom: 1px solid #dbeafe;
-    }
-
-    .chapter-header h3 {
-      color: #1d4ed8;
-      font-size: 21px;
-    }
-
-    .chapter-body {
-      padding: 22px;
-    }
-
-    .chapter-body h4 {
-      color: #2563eb;
-      margin: 20px 0 8px;
-      font-size: 17px;
-    }
-
-    .chapter-body p {
-      margin-bottom: 13px;
-      color: #374151;
-    }
-
-    .chapter-body ul {
-      padding-left: 24px;
-      margin-bottom: 15px;
-    }
-
-    .chapter-body li {
-      margin-bottom: 8px;
-    }
-
-    .example-box {
-      background: #f9fafb;
-      border-left: 4px solid #2563eb;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 5px;
-    }
-
-    .important-box {
-      background: #fff7ed;
-      border-left: 4px solid #f97316;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 5px;
-    }
-
-    .quiz-section {
-      margin-top: 35px;
-    }
-
-    .quiz-section h3 {
-      color: #2563eb;
-      margin-bottom: 18px;
-      font-size: 23px;
+    .section li {
+      margin-bottom: 7px;
     }
 
     .quiz-question {
       background: #f3f4f6;
-      padding: 18px;
-      border-radius: 12px;
-      margin-bottom: 18px;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
 
     .quiz-question strong {
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .quiz-question button.correct {
-      background: #16a34a !important;
-    }
-
-    .quiz-question button.wrong {
-      background: #dc2626 !important;
-    }
-
-    .mock-exam {
-      margin-top: 30px;
-      padding: 22px;
-      background: #eef2ff;
-      border-radius: 12px;
+      line-height: 1.5;
     }
 
     .loading {
@@ -271,12 +159,82 @@
       margin-top: 20px;
     }
 
-    .empty {
-      text-align: center;
-      padding: 30px;
-      color: #6b7280;
+    /* AI CHAT */
+
+    .ai-box {
+      margin-top: 30px;
       background: white;
+      border-radius: 15px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    }
+
+    .ai-box h2 {
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+
+    .ai-box p {
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    #chatMessages {
+      max-height: 450px;
+      overflow-y: auto;
+      padding: 10px 0;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      padding: 13px 15px;
       border-radius: 12px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .user-message {
+      background: #dbeafe;
+      margin-left: 10%;
+    }
+
+    .ai-message {
+      background: #f3f4f6;
+      margin-right: 10%;
+    }
+
+    .chat-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    #chatInput {
+      flex: 1;
+      padding: 13px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    #chatInput:focus {
+      border-color: #2563eb;
+    }
+
+    #sendButton {
+      min-width: 90px;
+    }
+
+    .typing {
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .close-btn {
+      background: #6b7280;
+      margin-bottom: 15px;
     }
 
     @media (max-width: 600px) {
@@ -288,12 +246,25 @@
         padding: 0 12px;
       }
 
-      .content {
+      .content,
+      .ai-box {
         padding: 18px;
       }
 
-      .chapter-body {
-        padding: 17px;
+      .user-message {
+        margin-left: 3%;
+      }
+
+      .ai-message {
+        margin-right: 3%;
+      }
+
+      .chat-row {
+        flex-direction: column;
+      }
+
+      #sendButton {
+        width: 100%;
       }
     }
   </style>
@@ -308,21 +279,60 @@
 
 <div class="container">
 
+  <!-- SEARCH -->
   <input
+    type="text"
     id="search"
     class="search"
-    type="text"
     placeholder="🔎 Search courses..."
-    onkeyup="searchCourses()"
+    oninput="searchCourses()"
   >
 
+  <!-- COURSES -->
   <div id="courses" class="courses">
-    <div class="loading">
-      Loading courses...
-    </div>
+    <div class="loading">Loading courses...</div>
   </div>
 
+  <!-- COURSE CONTENT -->
   <div id="content" class="content"></div>
+
+  <!-- AI ASSISTANT -->
+  <div class="ai-box">
+
+    <h2>🤖 Ask UniFresh AI</h2>
+
+    <p>
+      Ask questions about your freshman courses, chapters,
+      notes, quizzes, or exam preparation.
+    </p>
+
+    <div id="chatMessages">
+      <div class="message ai-message">
+        👋 Hello! I am UniFresh AI.
+
+        Ask me something like:
+        "Explain Chapter 1 of Anthropology"
+        or
+        "Give me detailed notes about culture."
+      </div>
+    </div>
+
+    <div class="chat-row">
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask UniFresh AI..."
+        onkeydown="handleChatKey(event)"
+      >
+
+      <button id="sendButton" onclick="sendMessage()">
+        Send
+      </button>
+
+    </div>
+
+  </div>
 
 </div>
 
@@ -331,14 +341,15 @@
 let courses = [];
 
 
-/* ==============================
+/* =========================================
    LOAD COURSES
-============================== */
+========================================= */
 
 fetch("courses.json")
   .then(response => {
+
     if (!response.ok) {
-      throw new Error("courses.json could not be loaded.");
+      throw new Error("courses.json not found");
     }
 
     return response.json();
@@ -357,20 +368,22 @@ fetch("courses.json")
     document.getElementById("courses").innerHTML = `
       <div class="error">
         <h3>⚠️ Course data could not be loaded.</h3>
+
         <p>
-          Make sure that <b>courses.json</b> is in the same
-          GitHub folder as <b>index.html</b>.
+          Make sure <b>courses.json</b> is in the same folder
+          as <b>index.html</b>.
         </p>
       </div>
     `;
 
     console.error(error);
+
   });
 
 
-/* ==============================
+/* =========================================
    DISPLAY COURSES
-============================== */
+========================================= */
 
 function displayCourses(list) {
 
@@ -379,43 +392,38 @@ function displayCourses(list) {
   if (!list || list.length === 0) {
 
     container.innerHTML = `
-      <div class="empty">
-        No courses found.
-      </div>
+      <p>No courses found.</p>
     `;
 
     return;
   }
 
-  container.innerHTML = list.map(course => {
+  container.innerHTML = list.map((course) => {
 
-    const realIndex = courses.indexOf(course);
+    const originalIndex = courses.indexOf(course);
 
     return `
 
       <div class="course">
 
         <h2>
-          ${course.icon || "📚"}
-          ${escapeHTML(course.name || "Unnamed Course")}
+          📚 ${escapeHTML(course.name || "Unnamed Course")}
         </h2>
 
         <p>
           ${escapeHTML(
             course.description ||
-            "Freshman university course"
+            course.short_description ||
+            "Freshman course"
           )}
         </p>
 
-        <span class="chapter-count">
-          📖 ${course.chapters ? course.chapters.length : 0}
-          Chapters
-        </span>
-
-        <br>
-
-        <button onclick="showCourse(${realIndex})">
+        <button onclick="showCourse(${originalIndex})">
           📖 Open Course
+        </button>
+
+        <button onclick="askAboutCourse(${originalIndex})">
+          🤖 Ask AI
         </button>
 
       </div>
@@ -426,9 +434,9 @@ function displayCourses(list) {
 }
 
 
-/* ==============================
+/* =========================================
    SHOW COURSE
-============================== */
+========================================= */
 
 function showCourse(index) {
 
@@ -440,38 +448,60 @@ function showCourse(index) {
 
   let html = `
 
-    <button class="back-button" onclick="backToCourses()">
-      ← Back to Courses
+    <button class="close-btn" onclick="closeCourse()">
+      ✕ Close
     </button>
 
     <h2>
-      ${course.icon || "📚"}
-      ${escapeHTML(course.name)}
+      📚 ${escapeHTML(course.name || "Course")}
     </h2>
-
-    <p class="course-description">
-      ${escapeHTML(course.description || "")}
-    </p>
 
   `;
 
 
-  /* ==========================
-     TOPICS
-  ========================== */
+  /* DESCRIPTION */
 
-  if (course.topics && course.topics.length > 0) {
+  if (course.description || course.short_description) {
 
     html += `
 
-      <div class="topics-box">
+      <div class="section">
+
+        <p>
+          ${escapeHTML(
+            course.description ||
+            course.short_description
+          )}
+        </p>
+
+      </div>
+
+    `;
+  }
+
+
+  /* TOPICS */
+
+  if (Array.isArray(course.topics)) {
+
+    html += `
+
+      <div class="section">
 
         <h3>📌 Topics</h3>
 
         <ul>
 
           ${course.topics.map(topic => `
-            <li>${escapeHTML(topic)}</li>
+
+            <li>
+              ${escapeHTML(
+                typeof topic === "string"
+                  ? topic
+                  : topic.name || ""
+              )}
+            </li>
+
           `).join("")}
 
         </ul>
@@ -482,151 +512,79 @@ function showCourse(index) {
   }
 
 
-  /* ==========================
-     CHAPTER NOTES
-  ========================== */
+  /* NOTES */
 
-  if (course.chapters && course.chapters.length > 0) {
+  const notes = course.short_notes || course.notes;
+
+  if (Array.isArray(notes)) {
 
     html += `
 
-      <h3 style="color:#2563eb; margin-bottom:20px;">
-        📝 Detailed Chapter Notes
-      </h3>
+      <div class="section">
+
+        <h3>📝 Short Notes</h3>
+
+        <ul>
+
+          ${notes.map(note => `
+
+            <li>
+              ${escapeHTML(
+                typeof note === "string"
+                  ? note
+                  : note.title || note.text || ""
+              )}
+            </li>
+
+          `).join("")}
+
+        </ul>
+
+      </div>
+
+    `;
+  }
+
+
+  /* CHAPTERS */
+
+  if (Array.isArray(course.chapters)) {
+
+    html += `
+
+      <div class="section">
+
+        <h3>📖 Chapters</h3>
 
     `;
 
     course.chapters.forEach((chapter, chapterIndex) => {
 
-      html += `
-
-        <div class="chapter">
-
-          <div class="chapter-header">
-
-            <h3>
-              📘 Chapter ${chapterIndex + 1}:
-              ${escapeHTML(chapter.title)}
-            </h3>
-
-          </div>
-
-          <div class="chapter-body">
-
-            <h4>📖 Chapter Overview</h4>
-
-            <p>
-              ${escapeHTML(chapter.overview || "")}
-            </p>
-
-      `;
-
-
-      /* Sections */
-
-      if (chapter.sections) {
-
-        chapter.sections.forEach(section => {
-
-          html += `
-
-            <h4>
-              ${escapeHTML(section.title)}
-            </h4>
-
-          `;
-
-          if (section.paragraphs) {
-
-            section.paragraphs.forEach(paragraph => {
-
-              html += `
-                <p>
-                  ${escapeHTML(paragraph)}
-                </p>
-              `;
-
-            });
-
-          }
-
-          if (section.points) {
-
-            html += `
-              <ul>
-                ${section.points.map(point => `
-                  <li>${escapeHTML(point)}</li>
-                `).join("")}
-              </ul>
-            `;
-
-          }
-
-          if (section.example) {
-
-            html += `
-
-              <div class="example-box">
-
-                <strong>💡 Example:</strong>
-
-                <p>
-                  ${escapeHTML(section.example)}
-                </p>
-
-              </div>
-
-            `;
-
-          }
-
-          if (section.important) {
-
-            html += `
-
-              <div class="important-box">
-
-                <strong>⭐ Important:</strong>
-
-                <p>
-                  ${escapeHTML(section.important)}
-                </p>
-
-              </div>
-
-            `;
-
-          }
-
-        });
-
-      }
-
-
-      /* Key points */
-
-      if (chapter.key_points) {
-
-        html += `
-
-          <h4>⭐ Key Points to Remember</h4>
-
-          <ul>
-
-            ${chapter.key_points.map(point => `
-              <li>${escapeHTML(point)}</li>
-            `).join("")}
-
-          </ul>
-
-        `;
-
-      }
-
+      const chapterName =
+        typeof chapter === "string"
+          ? chapter
+          : chapter.title ||
+            chapter.name ||
+            `Chapter ${chapterIndex + 1}`;
 
       html += `
 
-          </div>
+        <div class="quiz-question">
+
+          <strong>
+            📘 ${escapeHTML(chapterName)}
+          </strong>
+
+          <br>
+
+          <button
+            onclick="askChapter('${escapeJS(
+              course.name || "",
+              chapterName
+            )}')"
+          >
+            🤖 Ask AI About This Chapter
+          </button>
 
         </div>
 
@@ -634,22 +592,19 @@ function showCourse(index) {
 
     });
 
+    html += `</div>`;
   }
 
 
-  /* ==========================
-     QUIZ
-  ========================== */
+  /* QUIZ */
 
-  if (course.quiz && course.quiz.length > 0) {
+  if (Array.isArray(course.quiz)) {
 
     html += `
 
-      <div class="quiz-section">
+      <div class="section">
 
-        <h3>
-          ❓ Practice Quiz
-        </h3>
+        <h3>❓ Practice Quiz</h3>
 
     `;
 
@@ -660,12 +615,14 @@ function showCourse(index) {
         <div class="quiz-question">
 
           <strong>
-            ${i + 1}. ${escapeHTML(q.question)}
+            ${i + 1}. ${escapeHTML(q.question || "")}
           </strong>
+
+          <br><br>
 
       `;
 
-      if (q.options) {
+      if (Array.isArray(q.options)) {
 
         q.options.forEach(option => {
 
@@ -674,8 +631,8 @@ function showCourse(index) {
             <button
               onclick="checkAnswer(
                 this,
-                ${JSON.stringify(q.answer)},
-                ${JSON.stringify(option)}
+                '${escapeAttribute(q.answer || "")}',
+                '${escapeAttribute(option)}'
               )"
             >
               ${escapeHTML(option)}
@@ -687,64 +644,57 @@ function showCourse(index) {
 
       }
 
-      html += `
-
-        </div>
-
-      `;
+      html += `</div>`;
 
     });
 
     html += `</div>`;
-
   }
 
 
-  /* ==========================
-     MOCK EXAM
-  ========================== */
+  /* MOCK EXAM */
 
   if (course.mock_exam) {
 
+    const questions =
+      course.mock_exam.questions;
+
     html += `
 
-      <div class="mock-exam">
+      <div class="section">
 
         <h3>🎯 Mock Exam</h3>
 
         <p>
-          ${escapeHTML(
-            course.mock_exam.description ||
-            "Test yourself using this practice exam."
-          )}
-        </p>
-
-        <br>
-
-        <p>
-          <b>Questions:</b>
+          Questions:
           ${
-            course.mock_exam.questions
-              ? course.mock_exam.questions.length
-              : "N/A"
+            Array.isArray(questions)
+              ? questions.length
+              : course.mock_exam.number_of_questions || "N/A"
           }
         </p>
 
         <p>
-          <b>Duration:</b>
-          ${escapeHTML(course.mock_exam.duration || "Not specified")}
+          Duration:
+          ${escapeHTML(
+            course.mock_exam.duration ||
+            "Not specified"
+          )}
         </p>
 
-        <br>
-
-        <button onclick="startMockExam(${index})">
-          🎯 Start Mock Exam
-        </button>
+        ${
+          Array.isArray(questions)
+            ? `
+              <button onclick="startMockExam(${index})">
+                🚀 Start Mock Exam
+              </button>
+            `
+            : ""
+        }
 
       </div>
 
     `;
-
   }
 
 
@@ -758,104 +708,68 @@ function showCourse(index) {
 }
 
 
-/* ==============================
-   BACK TO COURSES
-============================== */
+/* =========================================
+   CLOSE COURSE
+========================================= */
 
-function backToCourses() {
+function closeCourse() {
 
-  document.getElementById("content").style.display = "none";
+  const content =
+    document.getElementById("content");
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  content.style.display = "none";
 
+  content.innerHTML = "";
 }
 
 
-/* ==============================
-   QUIZ CHECKER
-============================== */
+/* =========================================
+   QUIZ ANSWER
+========================================= */
 
 function checkAnswer(button, answer, selected) {
 
-  const buttons =
-    button.parentElement.querySelectorAll("button");
-
-  buttons.forEach(btn => {
-    btn.disabled = true;
-  });
-
   if (answer === selected) {
 
-    button.classList.add("correct");
-
+    button.style.background = "green";
     button.innerHTML = "✅ Correct";
 
   } else {
 
-    button.classList.add("wrong");
-
-    button.innerHTML = "❌ Wrong";
-
-    buttons.forEach(btn => {
-
-      if (btn.textContent.trim() === answer) {
-
-        btn.classList.add("correct");
-        btn.innerHTML = "✅ Correct Answer";
-
-      }
-
-    });
+    button.style.background = "red";
+    button.innerHTML = "❌ Try Again";
 
   }
-
 }
 
 
-/* ==============================
+/* =========================================
    SEARCH
-============================== */
+========================================= */
 
 function searchCourses() {
 
-  const text =
+  const searchText =
     document
       .getElementById("search")
       .value
       .toLowerCase()
       .trim();
 
-  const filtered = courses.filter(course => {
-
-    const name =
-      (course.name || "").toLowerCase();
-
-    const description =
-      (course.description || "").toLowerCase();
-
-    const topics =
-      (course.topics || [])
-        .join(" ")
-        .toLowerCase();
-
-    return (
-      name.includes(text) ||
-      description.includes(text) ||
-      topics.includes(text)
+  const filtered =
+    courses.filter(course =>
+      (course.name || "")
+        .toLowerCase()
+        .includes(searchText)
     );
-
-  });
 
   displayCourses(filtered);
 }
 
 
-/* ==============================
+/* =========================================
    MOCK EXAM
-============================== */
+========================================= */
 
 function startMockExam(index) {
 
@@ -863,10 +777,12 @@ function startMockExam(index) {
 
   if (
     !course.mock_exam ||
-    !course.mock_exam.questions
+    !Array.isArray(course.mock_exam.questions)
   ) {
 
-    alert("Mock exam questions are not available yet.");
+    alert(
+      "Mock exam questions are not available yet."
+    );
 
     return;
   }
@@ -879,8 +795,10 @@ function startMockExam(index) {
 
   let exam = `
 
-    <button class="back-button"
-      onclick="showCourse(${index})">
+    <button
+      class="close-btn"
+      onclick="showCourse(${index})"
+    >
       ← Back to Course
     </button>
 
@@ -888,10 +806,7 @@ function startMockExam(index) {
       🎯 ${escapeHTML(course.name)} - Mock Exam
     </h2>
 
-    <br>
-
   `;
-
 
   questions.forEach((q, i) => {
 
@@ -900,14 +815,14 @@ function startMockExam(index) {
       <div class="quiz-question">
 
         <strong>
-          ${i + 1}. ${escapeHTML(q.question)}
+          ${i + 1}. ${escapeHTML(q.question || "")}
         </strong>
 
-        <br>
+        <br><br>
 
     `;
 
-    if (q.options) {
+    if (Array.isArray(q.options)) {
 
       q.options.forEach(option => {
 
@@ -916,8 +831,8 @@ function startMockExam(index) {
           <button
             onclick="checkAnswer(
               this,
-              ${JSON.stringify(q.answer)},
-              ${JSON.stringify(option)}
+              '${escapeAttribute(q.answer || "")}',
+              '${escapeAttribute(option)}'
             )"
           >
             ${escapeHTML(option)}
@@ -929,14 +844,9 @@ function startMockExam(index) {
 
     }
 
-    exam += `
-
-      </div>
-
-    `;
+    exam += `</div>`;
 
   });
-
 
   content.innerHTML = exam;
 
@@ -945,13 +855,212 @@ function startMockExam(index) {
   content.scrollIntoView({
     behavior: "smooth"
   });
-
 }
 
 
-/* ==============================
-   HTML SAFETY
-============================== */
+/* =========================================
+   AI - ASK COURSE
+========================================= */
+
+function askAboutCourse(index) {
+
+  const course = courses[index];
+
+  if (!course) return;
+
+  const input =
+    document.getElementById("chatInput");
+
+  input.value =
+    `Give me detailed study notes for ${course.name}, organized chapter by chapter.`;
+
+  input.focus();
+
+  document
+    .querySelector(".ai-box")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+
+
+/* =========================================
+   AI - ASK CHAPTER
+========================================= */
+
+function askChapter(courseName, chapterName) {
+
+  const input =
+    document.getElementById("chatInput");
+
+  input.value =
+    `Explain ${chapterName} of ${courseName} in detailed study notes.`;
+
+  input.focus();
+
+  document
+    .querySelector(".ai-box")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+
+
+/* =========================================
+   AI CHAT
+========================================= */
+
+async function sendMessage() {
+
+  const input =
+    document.getElementById("chatInput");
+
+  const button =
+    document.getElementById("sendButton");
+
+  const messages =
+    document.getElementById("chatMessages");
+
+  const message =
+    input.value.trim();
+
+  if (!message) return;
+
+
+  /* USER MESSAGE */
+
+  const userMessage =
+    document.createElement("div");
+
+  userMessage.className =
+    "message user-message";
+
+  userMessage.textContent =
+    message;
+
+  messages.appendChild(userMessage);
+
+
+  input.value = "";
+
+  button.disabled = true;
+
+  button.textContent = "..." ;
+
+
+  /* TYPING */
+
+  const typing =
+    document.createElement("div");
+
+  typing.className =
+    "message ai-message typing";
+
+  typing.textContent =
+    "UniFresh AI is thinking...";
+
+  messages.appendChild(typing);
+
+  messages.scrollTop =
+    messages.scrollHeight;
+
+
+  try {
+
+    const response =
+      await fetch("/api/chat", {
+
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+          message: message
+        })
+
+      });
+
+
+    const data =
+      await response.json();
+
+
+    typing.remove();
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        data.error ||
+        "Unable to connect to UniFresh AI."
+      );
+
+    }
+
+
+    const aiMessage =
+      document.createElement("div");
+
+    aiMessage.className =
+      "message ai-message";
+
+    aiMessage.textContent =
+      data.answer ||
+      "Sorry, I could not generate an answer.";
+
+    messages.appendChild(aiMessage);
+
+
+  } catch (error) {
+
+    typing.remove();
+
+    const errorMessage =
+      document.createElement("div");
+
+    errorMessage.className =
+      "message ai-message";
+
+    errorMessage.textContent =
+      "⚠️ AI connection failed. Please try again.";
+
+    messages.appendChild(errorMessage);
+
+    console.error(error);
+
+  }
+
+
+  button.disabled = false;
+
+  button.textContent = "Send";
+
+  messages.scrollTop =
+    messages.scrollHeight;
+}
+
+
+/* =========================================
+   ENTER KEY
+========================================= */
+
+function handleChatKey(event) {
+
+  if (event.key === "Enter") {
+
+    event.preventDefault();
+
+    sendMessage();
+
+  }
+}
+
+
+/* =========================================
+   SECURITY / HTML HELPERS
+========================================= */
 
 function escapeHTML(value) {
 
@@ -965,6 +1074,30 @@ function escapeHTML(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+
+function escapeAttribute(value) {
+
+  if (value === null || value === undefined) {
+    return "";
+  }
+
+  return String(value)
+    .replace(/\\/g, "\\\\")
+    .replace(/'/g, "\\'");
+}
+
+
+function escapeJS(courseName, chapterName) {
+
+  return String(courseName)
+    .replace(/\\/g, "\\\\")
+    .replace(/'/g, "\\'") +
+    "', '" +
+    String(chapterName)
+      .replace(/\\/g, "\\\\")
+      .replace(/'/g, "\\'");
 }
 
 </script>
