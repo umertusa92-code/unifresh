@@ -1,8 +1,11 @@
 {
   "courses": [
+
     {
+      "id": "communicative-english",
       "name": "Communicative English Skills",
-      "description": "Freshman course designed to improve English communication skills.",
+      "icon": "📚",
+      "description": "A complete introduction to English communication skills for university freshmen.",
       "topics": [
         "Grammar",
         "Vocabulary",
@@ -13,173 +16,206 @@
         "Academic Communication"
       ],
 
-      "short_notes": [
+      "chapters": [
 
         {
-          "chapter": "Chapter 1: Grammar",
-          "notes": [
+          "title": "Introduction to Communicative English",
+          "overview": "Communicative English is the ability to use English effectively in real-life, academic and professional situations. It is not only about memorizing grammar rules. A successful English learner should be able to understand messages, express ideas clearly, ask questions, give information, participate in discussions and communicate with different people.",
+
+          "sections": [
+
             {
-              "topic": "Parts of Speech",
-              "note": "Parts of speech are categories of words used in sentences. Common categories include nouns, pronouns, verbs, adjectives, adverbs, prepositions, conjunctions, and interjections."
+              "title": "What is Communication?",
+              "paragraphs": [
+                "Communication is the process of sharing information, ideas, feelings, opinions and messages between people. Communication can happen through speaking, writing, listening, reading and non-verbal signals.",
+                "Effective communication happens when the receiver understands the intended meaning of the sender. Good communication therefore requires clear language, appropriate vocabulary, correct grammar and careful listening.",
+                "At university, students communicate with lecturers, classmates, administrators and other members of the academic community. They may need to ask questions, participate in group discussions, give presentations, write assignments and communicate through email."
+              ],
+              "points": [
+                "Sender: the person who sends a message.",
+                "Message: the information being communicated.",
+                "Receiver: the person who receives the message.",
+                "Feedback: the response given by the receiver.",
+                "Context: the situation in which communication happens."
+              ],
+              "example": "A student asks a lecturer, 'Could you please explain this concept again?' The student is the sender, the lecturer is the receiver, and the question is the message."
             },
+
             {
-              "topic": "Nouns",
-              "note": "A noun is a word that names a person, place, thing, or idea. Examples include student, university, book, and education."
+              "title": "Verbal and Non-Verbal Communication",
+              "paragraphs": [
+                "Verbal communication uses words. It can be spoken or written. Examples include conversations, lectures, presentations, emails, reports and text messages.",
+                "Non-verbal communication uses signals other than words. Facial expressions, eye contact, gestures, posture and tone of voice can influence the meaning of a message.",
+                "Students should understand that the same words can communicate different meanings depending on tone and context."
+              ],
+              "points": [
+                "Use simple and clear language.",
+                "Listen carefully before responding.",
+                "Use appropriate tone.",
+                "Maintain suitable eye contact during conversations.",
+                "Respect different communication styles."
+              ],
+              "important": "Good communication is a two-way process. Speaking clearly is important, but listening carefully is equally important."
             },
+
             {
-              "topic": "Pronouns",
-              "note": "A pronoun is used instead of a noun. Common pronouns include I, you, he, she, it, we, and they."
-            },
-            {
-              "topic": "Verbs",
-              "note": "A verb expresses an action or state. Examples include study, read, write, learn, and become."
-            },
-            {
-              "topic": "Subject and Verb Agreement",
-              "note": "The subject and verb should agree in number. A singular subject normally takes a singular verb, while a plural subject takes a plural verb."
+              "title": "Communication Barriers",
+              "paragraphs": [
+                "A communication barrier is anything that prevents a message from being understood correctly. Language differences, unclear pronunciation, unfamiliar vocabulary, noise, lack of attention and cultural differences can create barriers.",
+                "Students can reduce communication barriers by using clear language, asking for clarification, repeating important information and checking whether the listener has understood the message."
+              ],
+              "points": [
+                "Language barrier",
+                "Poor listening",
+                "Unclear pronunciation",
+                "Noise and distractions",
+                "Cultural differences",
+                "Lack of confidence"
+              ],
+              "example": "If a lecturer uses an unfamiliar academic term, a student can say, 'Could you please explain what this term means?'"
             }
+
+          ],
+
+          "key_points": [
+            "Communication involves sending and receiving messages.",
+            "Listening is as important as speaking.",
+            "Clear language reduces misunderstanding.",
+            "Context influences meaning.",
+            "Good communication requires practice."
           ]
         },
 
         {
-          "chapter": "Chapter 2: Tenses",
-          "notes": [
+          "title": "Grammar and Vocabulary",
+          "overview": "Grammar provides the structure needed to form meaningful sentences, while vocabulary provides the words needed to express ideas. University students need both grammar and vocabulary to communicate accurately.",
+
+          "sections": [
+
             {
-              "topic": "Simple Present",
-              "note": "The simple present is commonly used for habits, routines, facts, and general truths. Example: Students study every day."
+              "title": "Parts of Speech",
+              "paragraphs": [
+                "Parts of speech describe the roles words play in sentences. Understanding parts of speech helps students construct grammatically correct sentences.",
+                "The main parts of speech include nouns, pronouns, verbs, adjectives, adverbs, prepositions, conjunctions and interjections."
+              ],
+              "points": [
+                "Noun: names a person, place, thing or idea.",
+                "Pronoun: replaces a noun.",
+                "Verb: expresses an action or state.",
+                "Adjective: describes a noun.",
+                "Adverb: modifies a verb, adjective or another adverb.",
+                "Preposition: shows a relationship between words.",
+                "Conjunction: connects words or ideas."
+              ],
+              "example": "The intelligent student carefully completed the difficult assignment. 'Student' is a noun, 'intelligent' is an adjective, 'completed' is a verb and 'carefully' is an adverb."
             },
+
             {
-              "topic": "Simple Past",
-              "note": "The simple past is used for actions that happened and finished in the past. Example: She studied yesterday."
+              "title": "Sentence Structure",
+              "paragraphs": [
+                "A sentence normally contains a subject and a predicate. The subject tells us who or what the sentence is about, while the predicate gives information about the subject.",
+                "English sentences can be simple, compound, complex or compound-complex. Understanding sentence structure helps students write organized academic paragraphs."
+              ],
+              "points": [
+                "Simple sentence: one independent clause.",
+                "Compound sentence: two independent clauses joined together.",
+                "Complex sentence: an independent clause plus a dependent clause.",
+                "Use conjunctions such as and, but, because, although and so."
+              ],
+              "example": "Simple: Students study. Compound: Students study, and they attend lectures. Complex: Students study because they want to pass the examination."
             },
+
             {
-              "topic": "Simple Future",
-              "note": "The simple future is commonly used for actions that will happen in the future. Example: They will study tomorrow."
-            },
-            {
-              "topic": "Present Continuous",
-              "note": "The present continuous is used for an action happening around the present time. Example: The student is reading a book."
+              "title": "Building Vocabulary",
+              "paragraphs": [
+                "Vocabulary development means learning new words, understanding their meanings and using them correctly. Students should not only memorize individual words but also learn collocations, synonyms, antonyms and words in context.",
+                "A useful way to learn vocabulary is to read regularly and record unfamiliar words in a vocabulary notebook. Students can write the word, definition, pronunciation, synonym and an example sentence."
+              ],
+              "points": [
+                "Learn words in context.",
+                "Use a dictionary effectively.",
+                "Learn synonyms and antonyms.",
+                "Practice new words in sentences.",
+                "Review vocabulary regularly."
+              ],
+              "important": "Knowing the meaning of a word is not enough. You should also know how and when the word is normally used."
             }
+
+          ],
+
+          "key_points": [
+            "Grammar provides sentence structure.",
+            "Vocabulary provides words for communication.",
+            "Correct sentence structure improves clarity.",
+            "Vocabulary should be learned in context.",
+            "Regular practice improves language accuracy."
           ]
         },
 
         {
-          "chapter": "Chapter 3: Vocabulary",
-          "notes": [
-            {
-              "topic": "Vocabulary",
-              "note": "Vocabulary is the collection of words a person knows and uses in communication."
-            },
-            {
-              "topic": "Synonyms",
-              "note": "Synonyms are words that have similar or nearly similar meanings. Example: big and large."
-            },
-            {
-              "topic": "Antonyms",
-              "note": "Antonyms are words with opposite meanings. Example: hot and cold."
-            },
-            {
-              "topic": "Words in Context",
-              "note": "Understanding a word in context means using the surrounding words and sentences to understand its meaning."
-            }
-          ]
-        },
+          "title": "Reading, Writing, Listening and Speaking",
+          "overview": "The four major language skills are reading, writing, listening and speaking. University students need to develop all four skills because academic success requires understanding information and expressing ideas effectively.",
 
-        {
-          "chapter": "Chapter 4: Reading",
-          "notes": [
-            {
-              "topic": "Main Idea",
-              "note": "The main idea is the central point or most important message of a reading passage."
-            },
-            {
-              "topic": "Supporting Details",
-              "note": "Supporting details provide information that explains, describes, or supports the main idea."
-            },
-            {
-              "topic": "Reading for Specific Information",
-              "note": "Reading for specific information means looking for particular facts, names, dates, numbers, or other details."
-            },
-            {
-              "topic": "Making Inferences",
-              "note": "An inference is a conclusion that a reader makes using information from the text and prior knowledge."
-            }
-          ]
-        },
+          "sections": [
 
-        {
-          "chapter": "Chapter 5: Writing",
-          "notes": [
             {
-              "topic": "Paragraph",
-              "note": "A paragraph is a group of related sentences that develops one main idea."
+              "title": "Reading Skills",
+              "paragraphs": [
+                "Reading is the process of understanding written information. University students read textbooks, lecture materials, articles, reports and examination questions.",
+                "Effective readers identify the main idea, supporting details, unfamiliar vocabulary and the writer's purpose. Skimming can be used to get a general idea, while scanning can be used to find specific information."
+              ],
+              "points": [
+                "Skimming: reading quickly for the general idea.",
+                "Scanning: searching for specific information.",
+                "Main idea: the central point of a text.",
+                "Supporting detail: information that explains the main idea.",
+                "Inference: understanding information that is not directly stated."
+              ],
+              "example": "Before reading a long chapter carefully, a student may first read the title, headings and first sentences to understand the overall structure."
             },
-            {
-              "topic": "Topic Sentence",
-              "note": "A topic sentence introduces the main idea of a paragraph."
-            },
-            {
-              "topic": "Supporting Sentences",
-              "note": "Supporting sentences explain and develop the main idea introduced by the topic sentence."
-            },
-            {
-              "topic": "Concluding Sentence",
-              "note": "A concluding sentence brings the paragraph to a logical ending."
-            }
-          ]
-        },
 
-        {
-          "chapter": "Chapter 6: Listening",
-          "notes": [
             {
-              "topic": "Active Listening",
-              "note": "Active listening requires paying attention to the speaker and understanding the message."
+              "title": "Academic Writing",
+              "paragraphs": [
+                "Academic writing is formal writing used in universities. It includes paragraphs, essays, reports, summaries and assignments.",
+                "A good academic paragraph normally contains a topic sentence, supporting sentences and a concluding or linking sentence. Ideas should be logically organized and supported with appropriate evidence."
+              ],
+              "points": [
+                "Plan before writing.",
+                "Write a clear topic sentence.",
+                "Support ideas with explanations or evidence.",
+                "Use appropriate academic vocabulary.",
+                "Check grammar, spelling and punctuation.",
+                "Revise before submitting."
+              ],
+              "example": "Topic sentence: Regular reading improves students' academic performance. Supporting sentences then explain how reading develops vocabulary, comprehension and critical thinking."
             },
-            {
-              "topic": "Listening for Main Ideas",
-              "note": "Listening for the main idea means identifying the most important message in spoken communication."
-            },
-            {
-              "topic": "Listening for Details",
-              "note": "Listening for details involves identifying specific information from spoken communication."
-            }
-          ]
-        },
 
-        {
-          "chapter": "Chapter 7: Speaking",
-          "notes": [
             {
-              "topic": "Introduction",
-              "note": "A clear introduction helps a speaker begin communication and establish the topic."
-            },
-            {
-              "topic": "Discussion",
-              "note": "A discussion involves exchanging ideas, opinions, and information with other people."
-            },
-            {
-              "topic": "Presentation",
-              "note": "An academic presentation should have a clear introduction, organized main points, and a conclusion."
+              "title": "Listening and Speaking",
+              "paragraphs": [
+                "Listening involves receiving and interpreting spoken information. Active listeners pay attention to the speaker, identify important ideas and ask questions when necessary.",
+                "Speaking involves expressing ideas clearly through spoken language. University students need speaking skills for classroom discussions, group work, interviews and presentations."
+              ],
+              "points": [
+                "Listen for the main idea.",
+                "Take short notes.",
+                "Ask clarification questions.",
+                "Speak clearly.",
+                "Organize ideas before speaking.",
+                "Use appropriate pronunciation and tone."
+              ],
+              "important": "Confidence in speaking normally develops through repeated practice. Making small mistakes is a normal part of language learning."
             }
-          ]
-        },
 
-        {
-          "chapter": "Chapter 8: Academic Communication",
-          "notes": [
-            {
-              "topic": "Academic Language",
-              "note": "Academic language is formal language commonly used in university study, assignments, presentations, and academic discussions."
-            },
-            {
-              "topic": "Academic Discussion",
-              "note": "Academic discussion requires students to express ideas clearly, listen to others, and provide relevant reasons or evidence."
-            },
-            {
-              "topic": "Academic Presentation",
-              "note": "An academic presentation should be organized, clear, relevant, and appropriate for the audience."
-            }
+          ],
+
+          "key_points": [
+            "Reading develops comprehension.",
+            "Writing develops the ability to organize ideas.",
+            "Listening requires attention and interpretation.",
+            "Speaking requires clear organization and delivery.",
+            "The four skills support each other."
           ]
         }
 
@@ -187,90 +223,60 @@
 
       "quiz": [
         {
-          "question": "Which sentence is grammatically correct?",
+          "question": "Which skill involves understanding spoken information?",
           "options": [
-            "He go to school every day.",
-            "He goes to school every day.",
-            "He going to school every day.",
-            "He gone to school every day."
+            "Reading",
+            "Listening",
+            "Writing",
+            "Vocabulary"
           ],
-          "answer": "He goes to school every day."
+          "answer": "Listening"
         },
         {
-          "question": "Which word is a synonym of 'big'?",
+          "question": "What is the main idea of a paragraph?",
           "options": [
-            "Small",
-            "Large",
-            "Short",
-            "Weak"
-          ],
-          "answer": "Large"
-        },
-        {
-          "question": "What is the main idea of a passage?",
-          "options": [
-            "The central point",
             "A minor detail",
-            "A difficult word",
-            "The title only"
+            "The central point",
+            "A punctuation mark",
+            "A vocabulary list"
           ],
           "answer": "The central point"
         },
         {
-          "question": "What does a topic sentence do?",
+          "question": "Which word is a verb?",
           "options": [
-            "Ends every essay",
-            "Introduces the main idea of a paragraph",
-            "Lists all vocabulary",
-            "Asks a question"
+            "University",
+            "Beautiful",
+            "Study",
+            "Quickly"
           ],
-          "answer": "Introduces the main idea of a paragraph"
+          "answer": "Study"
         }
       ],
 
       "mock_exam": {
-        "number_of_questions": 4,
+        "description": "Practice exam covering grammar, vocabulary, reading, writing, listening and speaking.",
         "duration": "30 minutes",
         "questions": [
           {
-            "question": "Choose the correct sentence.",
+            "question": "What is communication?",
             "options": [
-              "She study English.",
-              "She studies English.",
-              "She studying English.",
-              "She studieds English."
+              "Only speaking",
+              "Sharing information and ideas",
+              "Only writing",
+              "Memorizing vocabulary"
             ],
-            "answer": "She studies English."
+            "answer": "Sharing information and ideas"
           },
           {
-            "question": "Which word has the opposite meaning of 'easy'?",
+            "question": "What does skimming mean?",
             "options": [
-              "Simple",
-              "Difficult",
-              "Clear",
-              "Short"
+              "Reading every word slowly",
+              "Reading for the general idea",
+              "Writing a paragraph",
+              "Listening to a lecture"
             ],
-            "answer": "Difficult"
-          },
-          {
-            "question": "What is a paragraph?",
-            "options": [
-              "A group of unrelated words",
-              "A group of related sentences about one main idea",
-              "A single word",
-              "A list of questions"
-            ],
-            "answer": "A group of related sentences about one main idea"
-          },
-          {
-            "question": "What is active listening?",
-            "options": [
-              "Ignoring the speaker",
-              "Talking continuously",
-              "Paying attention and understanding the speaker",
-              "Reading a book"
-            ],
-            "answer": "Paying attention and understanding the speaker"
+            "answer": "Reading for the general idea"
           }
         ]
       }
@@ -278,11 +284,12 @@
 
 
     {
+      "id": "critical-thinking",
       "name": "Critical Thinking",
-      "description": "Freshman course focused on reasoning, analysis, problem solving, and decision making.",
+      "icon": "🧠",
+      "description": "Develop reasoning, analysis, evidence evaluation, problem solving and decision-making skills.",
 
       "topics": [
-        "Introduction to Critical Thinking",
         "Arguments",
         "Evidence",
         "Reasoning",
@@ -291,101 +298,181 @@
         "Logical Fallacies"
       ],
 
-      "short_notes": [
+      "chapters": [
 
         {
-          "chapter": "Chapter 1: Introduction to Critical Thinking",
-          "notes": [
+          "title": "Introduction to Critical Thinking",
+          "overview": "Critical thinking is the ability to analyze information carefully, evaluate ideas, identify assumptions and make reasoned judgments. It helps students avoid accepting every claim without examination.",
+
+          "sections": [
+
             {
-              "topic": "Critical Thinking",
-              "note": "Critical thinking is the process of carefully analyzing information, evaluating ideas, and making reasoned judgments."
+              "title": "Meaning of Critical Thinking",
+              "paragraphs": [
+                "Critical thinking involves asking questions about information before accepting it as true. A critical thinker considers evidence, checks assumptions and compares alternative explanations.",
+                "At university, critical thinking is important because students encounter many different opinions, theories, arguments and sources of information. Students should learn to distinguish strong reasoning from unsupported claims."
+              ],
+              "points": [
+                "Ask questions.",
+                "Examine evidence.",
+                "Identify assumptions.",
+                "Compare alternative explanations.",
+                "Reach conclusions based on reasons."
+              ],
+              "example": "If someone says, 'This study method always produces the highest grades,' a critical thinker asks what evidence supports the claim and whether other factors were considered."
             },
+
             {
-              "topic": "Importance of Critical Thinking",
-              "note": "Critical thinking helps students evaluate information, solve problems, make decisions, and avoid unsupported conclusions."
+              "title": "Questions and Analysis",
+              "paragraphs": [
+                "Good questions help us understand a problem more deeply. Critical thinkers ask who, what, when, where, why and how.",
+                "Analysis means breaking a complex idea or problem into smaller parts so that each part can be examined carefully."
+              ],
+              "points": [
+                "What is the claim?",
+                "What evidence supports it?",
+                "Are there alternative explanations?",
+                "What assumptions are being made?",
+                "What conclusion follows from the evidence?"
+              ]
             }
+
+          ],
+
+          "key_points": [
+            "Critical thinking requires careful analysis.",
+            "Claims should be supported by evidence.",
+            "Questions help reveal weaknesses in reasoning.",
+            "Assumptions should be identified.",
+            "Conclusions should follow from available evidence."
           ]
         },
 
         {
-          "chapter": "Chapter 2: Arguments",
-          "notes": [
+          "title": "Arguments, Evidence and Reasoning",
+          "overview": "An argument is a set of statements in which reasons are presented to support a conclusion. Understanding arguments helps students evaluate academic discussions and written materials.",
+
+          "sections": [
+
             {
-              "topic": "Argument",
-              "note": "An argument is a set of statements in which reasons are presented to support a conclusion."
+              "title": "Claims and Arguments",
+              "paragraphs": [
+                "A claim is a statement that can be supported or challenged. An argument provides reasons for accepting a particular claim.",
+                "Arguments normally contain premises and a conclusion. Premises provide supporting reasons, while the conclusion is the idea the argument wants us to accept."
+              ],
+              "points": [
+                "Claim: a statement that can be evaluated.",
+                "Premise: a reason supporting a conclusion.",
+                "Conclusion: the main point supported by premises.",
+                "Evidence: information used to support a claim."
+              ],
+              "example": "Premise: Students who regularly attend lectures receive more information. Premise: More information can improve preparation. Conclusion: Regular lecture attendance can support academic preparation."
             },
+
             {
-              "topic": "Premise",
-              "note": "A premise is a statement that provides support or a reason for a conclusion."
+              "title": "Evaluating Evidence",
+              "paragraphs": [
+                "Evidence is information used to support a claim. Good evidence should be relevant, reliable and sufficient.",
+                "Students should consider the source of evidence, how the information was collected and whether the evidence actually supports the conclusion."
+              ],
+              "points": [
+                "Check the source.",
+                "Check the date.",
+                "Check whether the evidence is relevant.",
+                "Compare information from multiple sources.",
+                "Look for missing evidence."
+              ],
+              "important": "A large amount of information is not automatically strong evidence. The quality and relevance of evidence are important."
             },
+
             {
-              "topic": "Conclusion",
-              "note": "A conclusion is the claim or judgment that an argument attempts to support."
+              "title": "Reasoning",
+              "paragraphs": [
+                "Reasoning is the process of connecting information to reach a conclusion. Good reasoning uses clear relationships between premises and conclusions.",
+                "Deductive reasoning generally moves from general principles toward a specific conclusion. Inductive reasoning uses observations or examples to develop a general conclusion."
+              ],
+              "points": [
+                "Deductive reasoning moves from general to specific.",
+                "Inductive reasoning moves from specific observations to general patterns.",
+                "Strong reasoning should be logically connected.",
+                "Conclusions should not go beyond what the evidence supports."
+              ]
             }
+
+          ],
+
+          "key_points": [
+            "Arguments contain reasons and conclusions.",
+            "Evidence should be relevant and reliable.",
+            "Reasoning connects evidence to conclusions.",
+            "Sources should be evaluated carefully.",
+            "Strong conclusions require strong support."
           ]
         },
 
         {
-          "chapter": "Chapter 3: Evidence",
-          "notes": [
-            {
-              "topic": "Evidence",
-              "note": "Evidence is information used to support a claim or conclusion."
-            },
-            {
-              "topic": "Reliable Evidence",
-              "note": "Reliable evidence should come from trustworthy sources and should be relevant to the claim being evaluated."
-            }
-          ]
-        },
+          "title": "Problem Solving, Decision Making and Logical Fallacies",
+          "overview": "Critical thinking can be used to solve problems and make decisions. Students should also recognize common logical fallacies because weak arguments can lead to poor decisions.",
 
-        {
-          "chapter": "Chapter 4: Problem Solving",
-          "notes": [
-            {
-              "topic": "Identifying a Problem",
-              "note": "Problem solving begins by clearly identifying and understanding the problem."
-            },
-            {
-              "topic": "Possible Solutions",
-              "note": "After identifying a problem, different possible solutions can be developed and evaluated."
-            },
-            {
-              "topic": "Evaluating Solutions",
-              "note": "Solutions should be evaluated according to their advantages, disadvantages, feasibility, and possible consequences."
-            }
-          ]
-        },
+          "sections": [
 
-        {
-          "chapter": "Chapter 5: Decision Making",
-          "notes": [
             {
-              "topic": "Decision Making",
-              "note": "Decision making involves choosing among alternatives based on available information and relevant criteria."
+              "title": "Problem Solving",
+              "paragraphs": [
+                "Problem solving is the process of identifying a problem, understanding its causes, developing possible solutions and selecting an appropriate solution.",
+                "A good problem solver does not immediately choose the first solution. Different alternatives should be considered before a decision is made."
+              ],
+              "points": [
+                "Define the problem.",
+                "Identify possible causes.",
+                "Generate possible solutions.",
+                "Compare alternatives.",
+                "Choose a solution.",
+                "Evaluate the result."
+              ],
+              "example": "If a student is frequently late for class, possible causes may include transportation problems, poor time management or waking up late. Different solutions should be considered according to the actual cause."
             },
-            {
-              "topic": "Consequences",
-              "note": "Good decision making considers both immediate and possible future consequences."
-            }
-          ]
-        },
 
-        {
-          "chapter": "Chapter 6: Logical Fallacies",
-          "notes": [
             {
-              "topic": "Logical Fallacy",
-              "note": "A logical fallacy is an error in reasoning that can make an argument weak or misleading."
+              "title": "Decision Making",
+              "paragraphs": [
+                "Decision making involves selecting one option from several alternatives. Good decisions consider goals, evidence, risks, benefits and possible consequences.",
+                "Students make decisions about study schedules, courses, finances, group work and career development. Critical thinking can help them make these decisions more carefully."
+              ],
+              "points": [
+                "Identify the goal.",
+                "List possible options.",
+                "Consider advantages and disadvantages.",
+                "Evaluate risks.",
+                "Consider long-term consequences.",
+                "Make and review the decision."
+              ]
             },
+
             {
-              "topic": "Ad Hominem",
-              "note": "An ad hominem argument attacks a person instead of addressing the person's argument."
-            },
-            {
-              "topic": "Hasty Generalization",
-              "note": "A hasty generalization occurs when a broad conclusion is made from insufficient evidence."
+              "title": "Logical Fallacies",
+              "paragraphs": [
+                "A logical fallacy is a weakness in reasoning that can make an argument unreliable. Some fallacies are based on irrelevant information, emotional manipulation or incorrect assumptions.",
+                "Recognizing fallacies helps students evaluate advertisements, social media posts, political statements, discussions and academic arguments."
+              ],
+              "points": [
+                "Ad hominem: attacking the person instead of the argument.",
+                "False dilemma: presenting only two choices when more choices exist.",
+                "Hasty generalization: making a broad conclusion from limited examples.",
+                "Appeal to popularity: claiming something is true because many people believe it.",
+                "Straw man: misrepresenting an argument to make it easier to attack."
+              ],
+              "example": "Person A says, 'We should improve the university library.' Person B replies, 'You just hate the university.' This attacks the person instead of responding to the actual argument."
             }
+
+          ],
+
+          "key_points": [
+            "Define a problem before solving it.",
+            "Consider multiple possible solutions.",
+            "Evaluate advantages and disadvantages.",
+            "Think about consequences before making decisions.",
+            "Learn to recognize common logical fallacies."
           ]
         }
 
@@ -395,71 +482,734 @@
         {
           "question": "What is critical thinking?",
           "options": [
-            "Memorizing everything",
+            "Accepting every claim",
             "Carefully analyzing and evaluating information",
-            "Ignoring evidence",
-            "Accepting every claim"
+            "Memorizing information",
+            "Avoiding questions"
           ],
           "answer": "Carefully analyzing and evaluating information"
         },
         {
-          "question": "What is evidence?",
+          "question": "What supports a claim?",
           "options": [
-            "Information used to support a claim",
-            "A random opinion",
-            "A question",
-            "A greeting"
+            "Evidence",
+            "Rumor",
+            "Guess",
+            "Emotion only"
           ],
-          "answer": "Information used to support a claim"
+          "answer": "Evidence"
         },
         {
-          "question": "What is a conclusion?",
+          "question": "What is a hasty generalization?",
           "options": [
-            "A supporting reason",
-            "The claim an argument attempts to support",
-            "A vocabulary word",
-            "A question"
+            "A careful conclusion",
+            "A conclusion based on limited examples",
+            "A research method",
+            "A type of grammar"
           ],
-          "answer": "The claim an argument attempts to support"
+          "answer": "A conclusion based on limited examples"
         }
       ],
 
       "mock_exam": {
-        "number_of_questions": 3,
+        "description": "Practice exam on critical thinking, arguments, evidence, reasoning and problem solving.",
         "duration": "30 minutes",
         "questions": [
           {
-            "question": "Which activity is part of critical thinking?",
+            "question": "Which of the following is evidence?",
             "options": [
-              "Evaluating evidence",
-              "Ignoring information",
-              "Guessing without reason",
-              "Avoiding questions"
+              "A verified research result",
+              "A random guess",
+              "A rumor",
+              "An unsupported opinion"
             ],
-            "answer": "Evaluating evidence"
+            "answer": "A verified research result"
           },
           {
-            "question": "What is a premise?",
+            "question": "Which fallacy attacks the person instead of the argument?",
             "options": [
-              "A reason supporting a conclusion",
-              "A final grade",
-              "A question",
-              "A vocabulary list"
+              "Ad hominem",
+              "False dilemma",
+              "Hasty generalization",
+              "Straw man"
             ],
-            "answer": "A reason supporting a conclusion"
-          },
-          {
-            "question": "What is a logical fallacy?",
-            "options": [
-              "An error in reasoning",
-              "A correct answer",
-              "A study schedule",
-              "A paragraph"
-            ],
-            "answer": "An error in reasoning"
+            "answer": "Ad hominem"
           }
         ]
       }
+    },
+
+
+    {
+      "id": "study-skills",
+      "name": "Study Skills",
+      "icon": "📖",
+      "description": "Essential study strategies for successful university learning.",
+
+      "topics": [
+        "Time Management",
+        "Note Taking",
+        "Reading Strategies",
+        "Memory",
+        "Exam Preparation",
+        "Independent Learning"
+      ],
+
+      "chapters": [
+
+        {
+          "title": "Effective University Study",
+          "overview": "University learning requires students to become more independent. Unlike school, students are often responsible for planning their own study time, reviewing materials and preparing for assessments.",
+
+          "sections": [
+
+            {
+              "title": "Time Management",
+              "paragraphs": [
+                "Time management means planning how available time will be used. Students should balance lectures, assignments, reading, revision, rest and personal responsibilities.",
+                "A weekly study plan can help students avoid last-minute preparation. Large assignments should be divided into smaller tasks and completed gradually."
+              ],
+              "points": [
+                "Create a weekly schedule.",
+                "Set realistic goals.",
+                "Prioritize important tasks.",
+                "Avoid unnecessary distractions.",
+                "Include breaks and rest."
+              ]
+            },
+
+            {
+              "title": "Note Taking",
+              "paragraphs": [
+                "Effective notes contain important ideas rather than every word spoken by the lecturer. Students should listen for definitions, examples, explanations and points emphasized by the lecturer.",
+                "Notes should be reviewed soon after class. Reviewing helps correct incomplete information and strengthens memory."
+              ],
+              "points": [
+                "Write key ideas.",
+                "Use headings.",
+                "Use abbreviations.",
+                "Record important examples.",
+                "Review notes regularly."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "Plan study time.",
+            "Break large tasks into smaller tasks.",
+            "Take organized notes.",
+            "Review materials regularly.",
+            "Balance study and rest."
+          ]
+        },
+
+        {
+          "title": "Memory and Exam Preparation",
+          "overview": "Memory improves when students actively work with information. Reading repeatedly is less effective than active recall, practice questions and spaced review.",
+
+          "sections": [
+
+            {
+              "title": "Active Recall",
+              "paragraphs": [
+                "Active recall means trying to remember information without looking at the answer first. Students can use flashcards, practice questions or self-testing.",
+                "This method helps students discover what they know and what they still need to study."
+              ],
+              "points": [
+                "Use practice questions.",
+                "Test yourself.",
+                "Explain concepts without notes.",
+                "Use flashcards."
+              ]
+            },
+
+            {
+              "title": "Exam Preparation",
+              "paragraphs": [
+                "Good exam preparation should begin before the final days. Students should review course materials, practice questions and identify weak areas.",
+                "The final days before an exam should focus on review and practice rather than learning everything from the beginning."
+              ],
+              "points": [
+                "Start early.",
+                "Review important concepts.",
+                "Practice previous questions.",
+                "Identify weak topics.",
+                "Sleep adequately before the exam."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "Active recall strengthens learning.",
+            "Regular review is better than last-minute studying.",
+            "Practice questions reveal weak areas.",
+            "Good sleep supports concentration."
+          ]
+        }
+
+      ],
+
+      "quiz": [
+        {
+          "question": "What is active recall?",
+          "options": [
+            "Reading without thinking",
+            "Trying to remember information without looking at the answer",
+            "Copying notes",
+            "Skipping revision"
+          ],
+          "answer": "Trying to remember information without looking at the answer"
+        },
+        {
+          "question": "Why is time management important?",
+          "options": [
+            "It helps organize study and responsibilities",
+            "It removes the need to study",
+            "It guarantees perfect grades",
+            "It replaces lectures"
+          ],
+          "answer": "It helps organize study and responsibilities"
+        }
+      ]
+    },
+
+
+    {
+      "id": "academic-writing",
+      "name": "Academic Writing",
+      "icon": "✍️",
+      "description": "Learn how to write clear, organized and effective university assignments.",
+
+      "topics": [
+        "Paragraph Writing",
+        "Essay Structure",
+        "Academic Vocabulary",
+        "Paraphrasing",
+        "Summarizing",
+        "Referencing"
+      ],
+
+      "chapters": [
+
+        {
+          "title": "Paragraph Writing",
+          "overview": "A paragraph is a group of related sentences that develop one main idea. Strong academic paragraphs are organized and connected.",
+
+          "sections": [
+
+            {
+              "title": "Topic Sentence",
+              "paragraphs": [
+                "The topic sentence introduces the main idea of the paragraph. It tells the reader what the paragraph will discuss.",
+                "Supporting sentences then explain, describe or provide evidence for the topic sentence."
+              ],
+              "points": [
+                "State one main idea.",
+                "Keep the idea focused.",
+                "Use supporting details.",
+                "Finish with a linking or concluding sentence."
+              ],
+              "example": "Regular exercise improves students' well-being. It can reduce stress, improve physical fitness and help students maintain healthy routines."
+            },
+
+            {
+              "title": "Coherence and Cohesion",
+              "paragraphs": [
+                "Coherence means that ideas are logically organized. Cohesion means that sentences are connected through appropriate linking words, pronouns and repeated key terms.",
+                "Useful connectors include however, therefore, furthermore, because, although, for example and in addition."
+              ],
+              "points": [
+                "Organize ideas logically.",
+                "Use transition words.",
+                "Avoid unrelated sentences.",
+                "Connect sentences clearly."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "A paragraph should have one central idea.",
+            "Supporting sentences develop the main idea.",
+            "Transitions connect ideas.",
+            "Academic writing should be clear and organized."
+          ]
+        },
+
+        {
+          "title": "Essay Writing",
+          "overview": "An academic essay presents a focused response to a question or topic. Most essays contain an introduction, body paragraphs and a conclusion.",
+
+          "sections": [
+
+            {
+              "title": "Introduction",
+              "paragraphs": [
+                "The introduction prepares the reader for the essay. It normally provides background information, introduces the topic and presents the main argument or thesis.",
+                "A clear thesis statement tells the reader the central position or purpose of the essay."
+              ],
+              "points": [
+                "Introduce the topic.",
+                "Provide relevant background.",
+                "Present the thesis.",
+                "Preview major points when appropriate."
+              ]
+            },
+
+            {
+              "title": "Body Paragraphs",
+              "paragraphs": [
+                "Body paragraphs provide detailed discussion and evidence. Each paragraph should contribute to the overall argument.",
+                "A strong body paragraph normally contains a topic sentence, explanation, evidence or examples, analysis and a connection to the main argument."
+              ],
+              "points": [
+                "One main point per paragraph.",
+                "Explain evidence.",
+                "Use examples.",
+                "Connect the paragraph to the thesis."
+              ]
+            },
+
+            {
+              "title": "Conclusion",
+              "paragraphs": [
+                "The conclusion brings the major ideas together. It should not simply copy the introduction. Instead, it should summarize the argument and show the significance of the discussion."
+              ],
+              "points": [
+                "Restate the main argument in new words.",
+                "Summarize major points.",
+                "Give a final implication or recommendation when appropriate."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "An essay needs a clear structure.",
+            "The thesis controls the main argument.",
+            "Body paragraphs provide evidence and analysis.",
+            "The conclusion brings the discussion together."
+          ]
+        }
+
+      ],
+
+      "quiz": [
+        {
+          "question": "What is the main purpose of a topic sentence?",
+          "options": [
+            "Introduce the paragraph's main idea",
+            "End the essay",
+            "List references",
+            "Ask a question only"
+          ],
+          "answer": "Introduce the paragraph's main idea"
+        },
+        {
+          "question": "Where is the thesis normally found?",
+          "options": [
+            "Introduction",
+            "Reference list",
+            "Title only",
+            "Appendix"
+          ],
+          "answer": "Introduction"
+        }
+      ]
+    },
+
+
+    {
+      "id": "digital-literacy",
+      "name": "Digital Literacy",
+      "icon": "💻",
+      "description": "Develop essential digital skills for university study and responsible technology use.",
+
+      "topics": [
+        "Internet Skills",
+        "Information Search",
+        "Online Learning",
+        "Digital Safety",
+        "Email",
+        "Digital Research"
+      ],
+
+      "chapters": [
+
+        {
+          "title": "Digital Literacy Basics",
+          "overview": "Digital literacy is the ability to use digital technologies effectively, safely and responsibly. University students use computers and online platforms for learning, communication, research and collaboration.",
+
+          "sections": [
+
+            {
+              "title": "Finding Information Online",
+              "paragraphs": [
+                "Students frequently use search engines to find academic information. Effective searching requires choosing appropriate keywords and evaluating search results.",
+                "Not every website provides reliable information. Students should check the author, organization, publication date and evidence behind claims."
+              ],
+              "points": [
+                "Use specific keywords.",
+                "Compare multiple sources.",
+                "Check the author.",
+                "Check publication dates.",
+                "Prefer trustworthy academic sources."
+              ]
+            },
+
+            {
+              "title": "Digital Safety",
+              "paragraphs": [
+                "Digital safety involves protecting personal information, accounts and devices. Students should use strong passwords and avoid sharing sensitive information with unknown people.",
+                "Phishing messages may attempt to trick users into providing passwords or financial information. Suspicious links and unexpected attachments should be treated carefully."
+              ],
+              "points": [
+                "Use strong passwords.",
+                "Do not share passwords.",
+                "Be careful with suspicious links.",
+                "Use two-factor authentication when available.",
+                "Keep software updated."
+              ],
+              "important": "Never assume that an online message is trustworthy simply because it looks professional."
+            }
+
+          ],
+
+          "key_points": [
+            "Evaluate online information.",
+            "Protect personal information.",
+            "Use strong passwords.",
+            "Be careful with suspicious messages."
+          ]
+        },
+
+        {
+          "title": "Online Learning and Digital Communication",
+          "overview": "Online learning requires students to manage digital materials, communicate professionally and participate responsibly in virtual classes.",
+
+          "sections": [
+
+            {
+              "title": "Professional Email",
+              "paragraphs": [
+                "University students often communicate with lecturers through email. A professional email should have a clear subject, polite greeting, concise message and appropriate closing.",
+                "Students should explain their request clearly rather than sending extremely short or unclear messages."
+              ],
+              "points": [
+                "Use a clear subject.",
+                "Use an appropriate greeting.",
+                "Explain the purpose clearly.",
+                "Use polite language.",
+                "Check spelling before sending."
+              ],
+              "example": "Subject: Question About Assignment Deadline. Dear Lecturer, I would like to ask whether the assignment deadline has changed. Thank you for your assistance."
+            }
+
+          ],
+
+          "key_points": [
+            "Communicate professionally online.",
+            "Organize digital files.",
+            "Participate responsibly in online classes.",
+            "Protect personal information."
+          ]
+        }
+
+      ],
+
+      "quiz": [
+        {
+          "question": "What should you check when evaluating an online source?",
+          "options": [
+            "Only its color",
+            "Author, date and evidence",
+            "Only its title",
+            "Only the number of images"
+          ],
+          "answer": "Author, date and evidence"
+        },
+        {
+          "question": "What should a professional email contain?",
+          "options": [
+            "Clear subject and polite message",
+            "Only emojis",
+            "No subject",
+            "Random text"
+          ],
+          "answer": "Clear subject and polite message"
+        }
+      ]
+    },
+
+
+    {
+      "id": "communication-skills",
+      "name": "Academic Communication",
+      "icon": "🎤",
+      "description": "Build confidence in presentations, discussions, teamwork and academic communication.",
+
+      "topics": [
+        "Presentations",
+        "Group Discussion",
+        "Teamwork",
+        "Public Speaking",
+        "Academic Discussion",
+        "Interpersonal Communication"
+      ],
+
+      "chapters": [
+
+        {
+          "title": "Academic Presentations",
+          "overview": "Presentations allow students to communicate information and ideas to an audience. An effective presentation requires preparation, organization and clear delivery.",
+
+          "sections": [
+
+            {
+              "title": "Presentation Structure",
+              "paragraphs": [
+                "A presentation normally has an introduction, body and conclusion. The introduction tells the audience the topic and purpose. The body explains the main points, while the conclusion summarizes the key message.",
+                "Visual materials such as slides can support a presentation, but slides should not contain every word the speaker plans to say."
+              ],
+              "points": [
+                "Introduce the topic.",
+                "Explain the purpose.",
+                "Organize major points.",
+                "Use simple visual materials.",
+                "Summarize the main message."
+              ]
+            },
+
+            {
+              "title": "Public Speaking",
+              "paragraphs": [
+                "Public speaking can be difficult at first. Preparation and repeated practice can improve confidence. Speakers should focus on communicating their message rather than trying to avoid every possible mistake.",
+                "Voice, pronunciation, pace, eye contact and body language all affect the delivery of a presentation."
+              ],
+              "points": [
+                "Practice before presenting.",
+                "Speak clearly.",
+                "Do not speak too quickly.",
+                "Make suitable eye contact.",
+                "Use natural body language."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "Organize presentations clearly.",
+            "Practice before presenting.",
+            "Use slides to support rather than replace speaking.",
+            "Clear delivery improves understanding."
+          ]
+        },
+
+        {
+          "title": "Group Discussion and Teamwork",
+          "overview": "University students often work in groups. Effective teamwork requires listening, cooperation, responsibility and respect for different opinions.",
+
+          "sections": [
+
+            {
+              "title": "Participating in Discussions",
+              "paragraphs": [
+                "A good participant listens to other speakers and contributes relevant ideas. Disagreement can be handled respectfully by focusing on ideas rather than attacking individuals.",
+                "Students can use expressions such as 'I agree because...', 'I see your point, but...' and 'Could you explain that further?'"
+              ],
+              "points": [
+                "Listen actively.",
+                "Take turns speaking.",
+                "Give relevant contributions.",
+                "Respect different opinions.",
+                "Ask useful questions."
+              ]
+            },
+
+            {
+              "title": "Effective Teamwork",
+              "paragraphs": [
+                "Successful teamwork requires clear roles and shared responsibility. Each member should understand what they are expected to do and complete their tasks on time.",
+                "When problems occur, team members should discuss them openly and look for practical solutions."
+              ],
+              "points": [
+                "Divide responsibilities.",
+                "Set deadlines.",
+                "Communicate regularly.",
+                "Support team members.",
+                "Resolve disagreements respectfully."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "Listen before responding.",
+            "Respect different opinions.",
+            "Share responsibilities.",
+            "Communicate clearly with team members."
+          ]
+        }
+
+      ],
+
+      "quiz": [
+        {
+          "question": "What is a good presentation structure?",
+          "options": [
+            "Introduction, body and conclusion",
+            "Conclusion only",
+            "Random information",
+            "Questions only"
+          ],
+          "answer": "Introduction, body and conclusion"
+        },
+        {
+          "question": "What is important in teamwork?",
+          "options": [
+            "Ignoring other members",
+            "Shared responsibility",
+            "Doing nothing",
+            "Avoiding communication"
+          ],
+          "answer": "Shared responsibility"
+        }
+      ]
+    },
+
+
+    {
+      "id": "reading-skills",
+      "name": "Reading and Comprehension",
+      "icon": "📕",
+      "description": "Develop university-level reading comprehension and analytical reading skills.",
+
+      "topics": [
+        "Main Idea",
+        "Supporting Details",
+        "Skimming",
+        "Scanning",
+        "Inference",
+        "Vocabulary in Context"
+      ],
+
+      "chapters": [
+
+        {
+          "title": "Understanding Academic Texts",
+          "overview": "Academic reading requires more than recognizing individual words. Students need to identify the purpose, main ideas, supporting evidence and relationships between ideas.",
+
+          "sections": [
+
+            {
+              "title": "Main Idea and Supporting Details",
+              "paragraphs": [
+                "The main idea is the central message of a paragraph or text. Supporting details provide examples, explanations, facts or evidence related to that main idea.",
+                "Identifying the main idea helps students understand large amounts of information more efficiently."
+              ],
+              "points": [
+                "Ask what the paragraph is mainly about.",
+                "Look at the topic sentence.",
+                "Identify repeated ideas.",
+                "Separate main ideas from minor details."
+              ]
+            },
+
+            {
+              "title": "Skimming and Scanning",
+              "paragraphs": [
+                "Skimming means reading quickly to understand the general idea of a text. Readers may look at titles, headings, introductory sentences and conclusions.",
+                "Scanning means searching a text for specific information such as names, dates, numbers or keywords."
+              ],
+              "points": [
+                "Use skimming for general understanding.",
+                "Use scanning for specific information.",
+                "Read headings before detailed reading.",
+                "Use keywords to locate information."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "Identify the main idea.",
+            "Separate important information from minor details.",
+            "Use skimming for general understanding.",
+            "Use scanning for specific information."
+          ]
+        },
+
+        {
+          "title": "Inference and Vocabulary in Context",
+          "overview": "Strong readers can understand information that is not directly stated and can determine the meaning of unfamiliar words from context.",
+
+          "sections": [
+
+            {
+              "title": "Making Inferences",
+              "paragraphs": [
+                "An inference is a conclusion based on available information and background knowledge. Authors do not always state every idea directly.",
+                "Readers should use evidence from the text rather than making unsupported guesses."
+              ],
+              "points": [
+                "Look for clues.",
+                "Combine clues with background knowledge.",
+                "Avoid unsupported assumptions.",
+                "Check whether the inference fits the text."
+              ]
+            },
+
+            {
+              "title": "Vocabulary in Context",
+              "paragraphs": [
+                "When readers encounter an unfamiliar word, they can often understand its meaning by examining nearby words and sentences.",
+                "Context clues may include definitions, examples, contrasts and explanations."
+              ],
+              "points": [
+                "Read the whole sentence.",
+                "Read surrounding sentences.",
+                "Look for examples.",
+                "Look for contrast words.",
+                "Use a dictionary when necessary."
+              ]
+            }
+
+          ],
+
+          "key_points": [
+            "Inference must be based on evidence.",
+            "Context can help explain unfamiliar vocabulary.",
+            "Good readers check their interpretation against the text."
+          ]
+        }
+
+      ],
+
+      "quiz": [
+        {
+          "question": "What is skimming?",
+          "options": [
+            "Reading for the general idea",
+            "Searching for one number",
+            "Writing an essay",
+            "Memorizing vocabulary"
+          ],
+          "answer": "Reading for the general idea"
+        },
+        {
+          "question": "What is an inference?",
+          "options": [
+            "A conclusion based on clues and evidence",
+            "A random guess",
+            "A title",
+            "A grammar rule"
+          ],
+          "answer": "A conclusion based on clues and evidence"
+        }
+      ]
     }
+
   ]
 }
